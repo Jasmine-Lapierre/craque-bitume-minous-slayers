@@ -7,7 +7,6 @@
 }
 
 .swiper {
-  width: 100%;
   height: 70vh;
   background: rgba(212, 224, 132, 0.5);
   text-align: left;
@@ -83,9 +82,18 @@
   .swiper-slide img {
     width: 60%;
   }
-  .swiper-slide p, .swiper-slide h1 {
+  .swiper-slide p {
+    text-align: center;
+  }
+  .swiper-slide h1 {
     text-align: center;
     padding: 10px;
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .swiper-slide img {
+    width: 100%;
   }
 }
 .navbar {
@@ -142,11 +150,13 @@
 .card {
   background-image: url(../../sources/medias/accueil/pexels-photo-121629_535x.webp);
   width: 100%;
+  position: relative;
   background-size: cover;
   border-radius: 25px;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   border: none;
+  max-height: 900px;
   height: 100%;
   transition-property: box-shadow, transform;
   transition-duration: 0.3s;
@@ -159,21 +169,26 @@
   transform: scale(1.03);
 }
 .card-img-top {
-  height: 300px;
+  height: 50vh;
   border-radius: 25px;
-  background-size: cover;
 }
 .card-body {
   color: var(--vertfonce);
+  position: absolute;
+  width: 100%;
+  bottom: 0;
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.5);
   border-radius: 25px;
   border: none;
   font-weight: 900;
-  font-size: 50px;
+  font-size: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.card-body p {
+  margin: 0;
 }
 
 section.volets .card-img-top {
@@ -290,6 +305,18 @@ footer .btnDonate:active {
 }
 .footer--logo img {
   width: 10%;
+}
+.footer--logo--partenaire {
+  display: flex;
+}
+.footer--logo--partenaire:nth-child(even) {
+  justify-content: flex-end;
+}
+.footer--logo--partenaire:nth-child(odd) {
+  justify-content: flex-start;
+}
+.footer--logo--partenaire img {
+  width: 50%;
 }
 
 @media screen and (max-width: 992px) {
@@ -500,6 +527,10 @@ footer .btnDonate:active {
   text-align: center;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   max-width: 100%;
   width: 100vw;
@@ -523,7 +554,7 @@ section {
   width: 100%;
   height: 120%;
   position: relative;
-  padding: 10vw 50px;
+  padding: 10vw 0;
   box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.337254902);
 }
 section a {
@@ -567,6 +598,7 @@ header {
 .voirPlus a {
   color: var(--foret);
   font-weight: bold;
+  font-size: 20px;
 }
 
 .jasmine {
@@ -575,14 +607,4 @@ header {
 
 .deuxieme {
   color: var(--foret);
-}
-
-.card-body.equipe {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-
-.card-img-top.equipe {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
 }/*# sourceMappingURL=style.css.map */

@@ -12,13 +12,16 @@ footer {
     color: var(--foret);
     font-weight: bold;
     box-shadow: inset 0 3px 10px #00000056;
+
     a {
         color: var(--foret);
     }
+
     .row {
         align-items: flex-start;
         justify-content: center;
     }
+
     .btnDonate {
         background-color: var(--poudre);
         border-radius: 50px;
@@ -40,7 +43,7 @@ footer {
         &:active {
             transform: translateY(3px);
             box-shadow: none;
-            transition: box-shadow .3s,transform .3s;
+            transition: box-shadow .3s, transform .3s;
         }
 
     }
@@ -52,6 +55,19 @@ footer {
 
     img {
         width: 10%;
+    }
+
+    &--partenaire {
+        display: flex;
+        &:nth-child(even) {
+            justify-content: flex-end;
+        }
+        &:nth-child(odd) {
+            justify-content: flex-start;
+        }
+        img {
+            width: 50%;
+        }
     }
 
 }
