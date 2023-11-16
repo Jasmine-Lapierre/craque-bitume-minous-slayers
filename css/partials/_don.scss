@@ -47,26 +47,65 @@
     .row {
         position: relative;
     }
+    
     .jar {
-        position: absolute;
-        top: 35%;
-        left: 5%;
-    }
-    .lid {
+        position: relative;
         z-index: 2;
+        height: 70%;
+        margin-top: 20%;
+    }
+    .leafJar {
         position: absolute;
-        top: 35%;
-        left: 9%;
-        width: 21%;
+        width: 25%;
+        left: 45%;
+        top: -35%;
+    }
+    .leaf-jar {
+        position: absolute;
+        width: 20%;
+        z-index: 0;
+    }
+    .don-anim {
+        position: relative;
+    }
+    .formulaire {
+        position: relative;
+        z-index: 3;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .don {
+    .jar {
+        width: 30%;
     }
     .leafJar {
         position: absolute;
         width: 10%;
-        left: 15%;
-        top: -30%;
+        left: 45%;
+        top: 0%;
     }
     .leaf-jar {
         position: absolute;
         width: 10%;
     }
+}
+}
+
+@media screen and (max-width: 768px) {
+    .don {
+    .jar {
+        width: 50%;
+    }
+    .leafJar {
+        position: absolute;
+        width: 10%;
+        left: 45%;
+        top: 0%;
+    }
+    .leaf-jar {
+        position: absolute;
+        width: 10%;
+    }
+}
 }

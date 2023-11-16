@@ -46,7 +46,8 @@
   justify-self: center;
   align-self: center;
   border-radius: 25px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .swiper-slide .text {
   justify-self: center;
@@ -92,6 +93,9 @@
   }
 }
 @media screen and (max-width: 576px) {
+  .swiper-main {
+    margin-top: 50px;
+  }
   .swiper-slide img {
     width: 100%;
   }
@@ -125,6 +129,11 @@
   transition: box-shadow 0.3s, transform 0.3s;
 }
 
+@media screen and (max-width: 991px) {
+  .navbar .btnDonate {
+    margin-bottom: 25px;
+  }
+}
 .leaf1 {
   position: absolute;
   z-index: 2;
@@ -177,7 +186,8 @@
   position: absolute;
   width: 100%;
   bottom: 0;
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.5);
   border-radius: 25px;
   border: none;
@@ -234,28 +244,60 @@ section.volets .card-img-top {
   position: relative;
 }
 .don .jar {
-  position: absolute;
-  top: 35%;
-  left: 5%;
-}
-.don .lid {
+  position: relative;
   z-index: 2;
-  position: absolute;
-  top: 35%;
-  left: 9%;
-  width: 21%;
+  height: 70%;
+  margin-top: 20%;
 }
 .don .leafJar {
   position: absolute;
-  width: 10%;
-  left: 15%;
-  top: -30%;
+  width: 25%;
+  left: 45%;
+  top: -35%;
 }
 .don .leaf-jar {
   position: absolute;
-  width: 10%;
+  width: 20%;
+  z-index: 0;
+}
+.don .don-anim {
+  position: relative;
+}
+.don .formulaire {
+  position: relative;
+  z-index: 3;
 }
 
+@media screen and (max-width: 992px) {
+  .don .jar {
+    width: 30%;
+  }
+  .don .leafJar {
+    position: absolute;
+    width: 10%;
+    left: 45%;
+    top: 0%;
+  }
+  .don .leaf-jar {
+    position: absolute;
+    width: 10%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .don .jar {
+    width: 50%;
+  }
+  .don .leafJar {
+    position: absolute;
+    width: 10%;
+    left: 45%;
+    top: 0%;
+  }
+  .don .leaf-jar {
+    position: absolute;
+    width: 10%;
+  }
+}
 footer {
   position: relative;
   left: 0;
@@ -346,6 +388,7 @@ footer .btnDonate:active {
   font-size: 20px;
 }
 .popup a {
+  width: -moz-fit-content;
   width: fit-content;
   justify-self: center;
   align-self: center;
@@ -505,6 +548,13 @@ footer .btnDonate:active {
 .trier {
   display: flex;
   justify-content: flex-end;
+  z-index: 3;
+}
+.trier a {
+  color: var(--foret);
+  font-weight: bold;
+  font-size: 20px;
+  text-align: left;
 }
 
 .accordion-item {
@@ -607,4 +657,15 @@ header {
 
 .deuxieme {
   color: var(--foret);
+}
+
+small {
+  font-size: 70%;
+}
+
+@media screen and (max-width: 576px) {
+  h1 {
+    font-size: 40px;
+    padding-bottom: 0px;
+  }
 }/*# sourceMappingURL=style.css.map */

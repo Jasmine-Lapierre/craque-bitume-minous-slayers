@@ -10,4 +10,11 @@
 .trier {
     display: flex;
     justify-content: flex-end;
+    z-index: 3;
+    a {
+        color: var(--foret);
+        font-weight: bold;
+        font-size: 20px;
+        text-align: left;
+    }
 }

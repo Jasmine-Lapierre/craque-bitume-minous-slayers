@@ -100,6 +100,9 @@
 
 @media screen and (max-width: 576px ) {
     .swiper {
+        &-main {
+            margin-top: 50px;
+        }
         &-slide {
             img {
                 width: 100%;

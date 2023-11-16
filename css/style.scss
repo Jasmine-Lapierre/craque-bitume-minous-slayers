@@ -111,3 +111,14 @@ header {
 .deuxieme{
     color: var(--foret);
 }
+
+small {
+    font-size: 70%;
+}
+
+@media screen and (max-width: 576px) {
+    h1 {
+        font-size: 40px;
+        padding-bottom: 0px;
+    }
+}
