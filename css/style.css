@@ -285,17 +285,18 @@ section.volets .card-img-top {
 }
 @media screen and (max-width: 768px) {
   .don .jar {
-    width: 50%;
+    width: 40%;
+    margin-top: 30%;
   }
   .don .leafJar {
     position: absolute;
-    width: 10%;
+    width: 15%;
     left: 45%;
     top: 0%;
   }
   .don .leaf-jar {
     position: absolute;
-    width: 10%;
+    width: 13%;
   }
 }
 footer {
@@ -327,7 +328,7 @@ footer .btnDonate {
   padding: 7px 25px;
   color: var(--foret);
   font-weight: bold;
-  font-size: 30px;
+  font-size: 16px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.337254902);
   display: flex;
   justify-content: center;
@@ -351,19 +352,34 @@ footer .btnDonate:active {
 .footer--logo--partenaire {
   display: flex;
 }
-.footer--logo--partenaire:nth-child(even) {
+.footer--logo--partenaire:nth-child(odd) {
   justify-content: flex-end;
 }
-.footer--logo--partenaire:nth-child(odd) {
+.footer--logo--partenaire:nth-child(even) {
   justify-content: flex-start;
 }
 .footer--logo--partenaire img {
-  width: 50%;
+  width: 100%;
+  max-width: 100px;
 }
 
 @media screen and (max-width: 992px) {
+  footer p {
+    font-size: 16px;
+  }
   .footer--logo img {
     width: 20%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer--logo--partenaire {
+    display: flex;
+  }
+  .footer--logo--partenaire:nth-child(odd) {
+    justify-content: center;
+  }
+  .footer--logo--partenaire:nth-child(even) {
+    justify-content: center;
   }
 }
 .popup {
@@ -571,10 +587,23 @@ footer .btnDonate:active {
   color: var(--poudre);
 }
 
+.section-formation {
+  text-align: left;
+}
+.section-formation figure {
+  text-align: center;
+}
+.section-formation figure img {
+  width: 50%;
+}
+
+.section-equipe {
+  text-align: left;
+}
+
 * {
   font-family: "Playfair Display", serif;
   box-sizing: border-box;
-  text-align: center;
 }
 
 html {
@@ -588,6 +617,7 @@ body {
   position: relative;
   overflow-x: hidden;
   background-color: var(--mindaro);
+  text-align: center;
 }
 
 h1 {
@@ -648,6 +678,10 @@ header {
 .voirPlus a {
   color: var(--foret);
   font-weight: bold;
+  font-size: 20px;
+}
+
+p {
   font-size: 20px;
 }
 

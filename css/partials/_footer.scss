@@ -30,7 +30,7 @@ footer {
         padding: 7px 25px;
         color: var(--foret);
         font-weight: bold;
-        font-size: 30px;
+        font-size: 16px;
         box-shadow: 0 3px 10px #00000056;
         display: flex;
         justify-content: center;
@@ -48,6 +48,8 @@ footer {
 
     }
 
+
+
 }
 
 .footer--logo {
@@ -59,23 +61,54 @@ footer {
 
     &--partenaire {
         display: flex;
-        &:nth-child(even) {
+
+        &:nth-child(odd) {
             justify-content: flex-end;
         }
-        &:nth-child(odd) {
+
+        &:nth-child(even) {
             justify-content: flex-start;
         }
+
         img {
-            width: 50%;
+            width: 100%;
+            max-width: 100px;
         }
     }
 
 }
 
 @media screen and (max-width: 992px) {
+    footer {
+        p {
+        font-size: 16px;
+    }
+    }
+
     .footer--logo {
         img {
             width: 20%;
         }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+
+    .footer--logo {
+
+
+        &--partenaire {
+            display: flex;
+
+            &:nth-child(odd) {
+                justify-content: center;
+            }
+
+            &:nth-child(even) {
+                justify-content: center;
+            }
+        }
+
     }
 }

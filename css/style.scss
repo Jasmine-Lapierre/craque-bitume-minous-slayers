@@ -12,10 +12,12 @@
 @use "partials/description_base";
 @use "partials/hubs";
 @use "partials/FAQ";
+@use "partials/fornations";
+@use "partials/equipe";
+
 * {
     font-family: 'Playfair Display', serif;
     box-sizing: border-box;
-    text-align: center;
 }
 
 html {
@@ -29,6 +31,7 @@ body {
     position: relative;
     overflow-x: hidden;
     background-color: var(--mindaro);
+    text-align: center;
 }
 
 h1 {
@@ -102,6 +105,10 @@ header {
         font-size: 20px;
     }
     
+}
+
+p {
+    font-size: 20px;
 }
 
 .jasmine{
