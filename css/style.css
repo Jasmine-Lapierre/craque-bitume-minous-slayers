@@ -596,6 +596,10 @@ footer .btnDonate:active {
   width: 50%;
 }
 
+.formation--grid.container .wrap {
+  text-align: center;
+}
+
 section .container .wrap {
   margin: 5px;
   position: relative;
