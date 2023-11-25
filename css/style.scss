@@ -13,6 +13,7 @@
 @use "partials/hubs";
 @use "partials/FAQ";
 @use "partials/formations";
+@use "partials/volets";
 @use "partials/equipe";
 
 * {
@@ -87,9 +88,7 @@ header {
 .formation--grid{
     text-align: left;
     font-size: 30px;
-    img{
-        max-width: 80%;
-    }
+    
 }
 
 
@@ -108,14 +107,6 @@ header {
 
 p {
     font-size: 20px;
-}
-
-.jasmine{
-    background-image: url(../sources/medias/apropos/jasmine.jpg);
-}
-
-.deuxieme{
-    color: var(--foret);
 }
 
 small {

@@ -596,27 +596,72 @@ footer .btnDonate:active {
   width: 50%;
 }
 
+.deuxieme {
+  color: var(--foret);
+}
+.deuxieme .wrap .imgdescription p {
+  background-color: var(--poudre);
+}
+
 .formation--grid.container .wrap {
   text-align: center;
 }
 
-section .container .wrap {
-  margin: 5px;
+.wrap {
+  width: 100%;
   position: relative;
 }
-section .container .wrap:nth-child(odd) {
-  float: right;
+.wrap img {
+  width: 80%;
 }
-section .container .wrap:nth-child(even) {
-  float: right;
-}
-section .container .wrap .imgdescription {
+.wrap .imgdescription {
   position: absolute;
   bottom: 0;
   opacity: 90%;
   width: 100%;
 }
-section .container .wrap .imgdescription p {
+.wrap .imgdescription p {
+  background-color: var(--mindaro);
+  padding: 2%;
+  margin: 0;
+}
+
+.section-volet {
+  text-align: left;
+}
+.section-volet figure {
+  float: right;
+  text-align: center;
+}
+.section-volet figure img {
+  width: 50%;
+}
+
+.deuxieme {
+  color: var(--foret);
+}
+.deuxieme .wrap .imgdescription p {
+  background-color: var(--poudre);
+}
+
+.volet--grid.container .wrap {
+  text-align: center;
+}
+
+.wrap {
+  width: 100%;
+  position: relative;
+}
+.wrap img {
+  width: 80%;
+}
+.wrap .imgdescription {
+  position: absolute;
+  bottom: 0;
+  opacity: 90%;
+  width: 100%;
+}
+.wrap .imgdescription p {
   background-color: var(--mindaro);
   padding: 2%;
   margin: 0;
@@ -624,6 +669,10 @@ section .container .wrap .imgdescription p {
 
 .section-equipe {
   text-align: left;
+}
+
+.jasmine {
+  background-image: url(../sources/medias/apropos/jasmine.jpg);
 }
 
 * {
@@ -690,9 +739,6 @@ header {
   text-align: left;
   font-size: 30px;
 }
-.formation--grid img {
-  max-width: 80%;
-}
 
 .voirPlus {
   display: flex;
@@ -707,14 +753,6 @@ header {
 
 p {
   font-size: 20px;
-}
-
-.jasmine {
-  background-image: url(../sources/medias/apropos/jasmine.jpg);
-}
-
-.deuxieme {
-  color: var(--foret);
 }
 
 small {
