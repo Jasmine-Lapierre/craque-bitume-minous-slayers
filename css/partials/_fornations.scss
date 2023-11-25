@@ -16,7 +16,7 @@ section {
     .container {
         .wrap {
             &:nth-child(odd) {
-                float: left;
+                float: right;
             }
 
             &:nth-child(even) {

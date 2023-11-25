@@ -549,6 +549,7 @@ footer .btnDonate:active {
 
 .description-generale {
   color: var(--foret);
+  text-align: left;
 }
 
 .card-hub {
@@ -600,7 +601,7 @@ section .container .wrap {
   position: relative;
 }
 section .container .wrap:nth-child(odd) {
-  float: left;
+  float: right;
 }
 section .container .wrap:nth-child(even) {
   float: right;
@@ -682,6 +683,7 @@ header {
 }
 
 .formation--grid {
+  text-align: left;
   font-size: 30px;
 }
 .formation--grid img {
