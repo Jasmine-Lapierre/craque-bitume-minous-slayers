@@ -1,10 +1,44 @@
 .section-formation {
     text-align: left;
+
     figure {
+        float: right;
+
         img {
             width: 50%;
         }
-       text-align: center;
+
+        text-align: center;
     }
 }
 
+section {
+    .container {
+        .wrap {
+            &:nth-child(odd) {
+                float: left;
+            }
+
+            &:nth-child(even) {
+                float: right;
+            }
+
+            margin: 5px;
+            position: relative;
+
+            .imgdescription {
+                position: absolute;
+                bottom: 0;
+                opacity: 90%;
+                width: 100%;
+
+                p {
+                    background-color: var(--mindaro);
+                    padding: 2%;
+                    margin: 0;
+                }
+
+            }
+        }
+    }
+}

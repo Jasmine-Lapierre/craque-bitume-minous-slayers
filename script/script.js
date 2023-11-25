@@ -3,6 +3,7 @@
 let popup = document.querySelector(".popup");
 let closePopup = document.querySelector(".bi-x-lg");
 let enleve = localStorage.getItem("AppuieX");
+let menu = document.querySelector(".navbar-toggler-icon");
 
 
 let banniereRajouter = function(){
@@ -112,3 +113,11 @@ gsap.to('.leaf-jar', {
 gsap.timeline({repeat: -1})
 .fromTo(".leaf-jar", {opacity: "0%"}, {opacity: "100%", duration: 3, })
 .fromTo(".leaf-jar", {opacity: "100%"}, {opacity: "0%", duration: 3})
+
+menu.addEventListener("mouseover", function(){
+  gsap.fromTo('.navbar-toggler-icon', {scale: 1}, {scale: 1.5, ease: "elastic.out(1,0.3)"})
+})
+
+menu.addEventListener("mouseout", function(){
+  gsap.fromTo('.navbar-toggler-icon', {scale: 1.5}, {scale: 1})
+})

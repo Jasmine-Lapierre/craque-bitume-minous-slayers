@@ -46,8 +46,7 @@
   justify-self: center;
   align-self: center;
   border-radius: 25px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .swiper-slide .text {
   justify-self: center;
@@ -186,8 +185,7 @@
   position: absolute;
   width: 100%;
   bottom: 0;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.5);
   border-radius: 25px;
   border: none;
@@ -404,7 +402,6 @@ footer .btnDonate:active {
   font-size: 20px;
 }
 .popup a {
-  width: -moz-fit-content;
   width: fit-content;
   justify-self: center;
   align-self: center;
@@ -591,10 +588,33 @@ footer .btnDonate:active {
   text-align: left;
 }
 .section-formation figure {
+  float: right;
   text-align: center;
 }
 .section-formation figure img {
   width: 50%;
+}
+
+section .container .wrap {
+  margin: 5px;
+  position: relative;
+}
+section .container .wrap:nth-child(odd) {
+  float: left;
+}
+section .container .wrap:nth-child(even) {
+  float: right;
+}
+section .container .wrap .imgdescription {
+  position: absolute;
+  bottom: 0;
+  opacity: 90%;
+  width: 100%;
+}
+section .container .wrap .imgdescription p {
+  background-color: var(--mindaro);
+  padding: 2%;
+  margin: 0;
 }
 
 .section-equipe {
@@ -662,8 +682,6 @@ header {
 }
 
 .formation--grid {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
   font-size: 30px;
 }
 .formation--grid img {
