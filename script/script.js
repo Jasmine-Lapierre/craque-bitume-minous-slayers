@@ -3,7 +3,7 @@
 let popup = document.querySelector(".popup");
 let closePopup = document.querySelector(".bi-x-lg");
 let enleve = localStorage.getItem("AppuieX");
-let menu = document.querySelector(".navbar-toggler-icon");
+let menu = document.querySelector(".navbar-toggler");
 
 
 let banniereRajouter = function(){

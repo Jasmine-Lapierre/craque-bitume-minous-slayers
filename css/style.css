@@ -179,6 +179,8 @@
 .card-img-top {
   height: 50vh;
   border-radius: 25px;
+  object-fit: cover;
+  object-position: 50% 50%;
 }
 .card-body {
   color: var(--vertfonce);
@@ -339,6 +341,12 @@ footer .btnDonate:active {
   transform: translateY(3px);
   box-shadow: none;
   transition: box-shadow 0.3s, transform 0.3s;
+}
+footer .socials {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: var(--foret);
 }
 
 .footer--logo {
@@ -572,12 +580,16 @@ footer .btnDonate:active {
 }
 
 .accordion-item {
-  background-color: var(--mindaro);
+  background: rgba(246, 249, 241, 0.3);
   border: none;
 }
 
 .accordion-button {
-  background-color: var(--poudre);
+  background: rgba(246, 249, 241, 0.5);
+}
+.accordion-button:not(.collapsed) {
+  background-color: var(--asperge);
+  color: var(--poudre);
 }
 
 .accordion-button:focus {
@@ -585,14 +597,14 @@ footer .btnDonate:active {
   color: var(--poudre);
 }
 
-.section-formation {
+.section-formation, .section-volet {
   text-align: left;
 }
-.section-formation figure {
+.section-formation figure, .section-volet figure {
   float: right;
   text-align: center;
 }
-.section-formation figure img {
+.section-formation figure img, .section-volet figure img {
   width: 50%;
 }
 
@@ -603,63 +615,25 @@ footer .btnDonate:active {
   background-color: var(--poudre);
 }
 
-.formation--grid.container .wrap {
+.formation--grid.container .wrap, .volet--grid.container .wrap {
   text-align: center;
 }
 
 .wrap {
   width: 100%;
+  display: flex;
+  justify-content: center;
   position: relative;
 }
 .wrap img {
   width: 80%;
+  border-radius: 25px;
 }
 .wrap .imgdescription {
   position: absolute;
   bottom: 0;
   opacity: 90%;
-  width: 100%;
-}
-.wrap .imgdescription p {
-  background-color: var(--mindaro);
-  padding: 2%;
-  margin: 0;
-}
-
-.section-volet {
-  text-align: left;
-}
-.section-volet figure {
-  float: right;
-  text-align: center;
-}
-.section-volet figure img {
-  width: 50%;
-}
-
-.deuxieme {
-  color: var(--foret);
-}
-.deuxieme .wrap .imgdescription p {
-  background-color: var(--poudre);
-}
-
-.volet--grid.container .wrap {
-  text-align: center;
-}
-
-.wrap {
-  width: 100%;
-  position: relative;
-}
-.wrap img {
-  width: 80%;
-}
-.wrap .imgdescription {
-  position: absolute;
-  bottom: 0;
-  opacity: 90%;
-  width: 100%;
+  width: 81%;
 }
 .wrap .imgdescription p {
   background-color: var(--mindaro);
@@ -669,6 +643,19 @@ footer .btnDonate:active {
 
 .section-equipe {
   text-align: left;
+}
+
+.equipe {
+  text-align: center;
+}
+
+.btn-secondary {
+  background-color: var(--foret);
+}
+
+.modal-content {
+  background-color: var(--poudre);
+  color: var(--vertfonce);
 }
 
 .jasmine {

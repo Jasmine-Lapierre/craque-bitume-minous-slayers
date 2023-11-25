@@ -27,6 +27,9 @@
     &-img-top {
         height: 50vh;
         border-radius: 25px;
+        object-fit: cover;
+        object-position: 50% 50%;
+
     }
 
     &-body {
@@ -43,6 +46,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
         p {
             margin: 0;
         }

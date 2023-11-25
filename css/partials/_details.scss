@@ -1,4 +1,4 @@
-.section-volet {
+.section-formation, .section-volet {
     text-align: left;
 
 
@@ -29,7 +29,7 @@
     }
 }
 
-.volet--grid.container {
+.formation--grid.container, .volet--grid.container {
     .wrap {
         text-align: center;
     }
@@ -38,11 +38,13 @@
 .wrap {
 
     width: 100%;
-
+    display: flex;
+    justify-content: center;
     position: relative;
 
     img {
         width: 80%;
+        border-radius: 25px;
     }
 
 
@@ -50,7 +52,8 @@
         position: absolute;
         bottom: 0;
         opacity: 90%;
-        width: 100%;
+        width: 81%;
+        
 
         p {
             background-color: var(--mindaro);

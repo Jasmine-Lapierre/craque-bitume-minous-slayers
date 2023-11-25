@@ -1,9 +1,15 @@
+@use "sass:color";
+
 .accordion-item{
-    background-color: var(--mindaro);
+    background: color.adjust(#F6F9F1, $alpha: -0.7);
     border: none;
 }
 .accordion-button{
-    background-color: var(--poudre);
+    &:not(.collapsed) {
+        background-color: var(--asperge);
+        color: var(--poudre);
+    }
+    background: color.adjust(#F6F9F1, $alpha: -0.5);
 }
 .accordion-button:focus{
     background-color: var(--asperge);
