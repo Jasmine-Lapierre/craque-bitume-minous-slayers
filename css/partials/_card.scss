@@ -2,13 +2,10 @@
 @use "variables";
 
 .card {
-    background-image: url(../../sources/medias/accueil/pexels-photo-121629_535x.webp);
     width: 100%;
     position: relative;
-    background-size: cover;
+    object-fit: cover;
     border-radius: 25px;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
     border: none;
     max-height: 900px;
     height: 100%;
@@ -24,11 +21,22 @@
         transform: scale(1.03);
     }
 
-    &-img-top {
-        height: 50vh;
-        border-radius: 25px;
-        object-fit: cover;
-        object-position: 50% 50%;
+    &-img {
+        &-top {
+            height: 50vh;
+            border-radius: 25px;
+            object-fit: cover;
+            object-position: 50% 50%;
+        }
+
+        &-fluid {
+            height: 20vh;
+            border-radius: 25px;
+            object-fit: cover;
+            width: 100%;
+            object-position: 50% 50%;
+
+        }
 
     }
 
@@ -46,6 +54,16 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        &-side {
+            text-decoration: none;
+            position: static;
+            height: 100%;
+            left: 0;
+            &-prev {
+                text-align: right;
+            }
+        }
 
         p {
             margin: 0;
