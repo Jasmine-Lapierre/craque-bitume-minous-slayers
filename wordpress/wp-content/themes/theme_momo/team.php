@@ -26,7 +26,9 @@ else : // Si aucune page n'a été trouvée
 	get_template_part( 'partials/404' ); // Affiche partials/404.php
 endif;
 
+?>
 
+<?php 
 
 
 get_sidebar(); // Affiche le contenu de sidebar.php

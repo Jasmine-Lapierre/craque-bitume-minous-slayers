@@ -5,3 +5,777 @@ Author URI: https://github.com/Jasmine-Lapierre/craque-bitume-minous-slayers
 Description: Refonte de l'OBNL Craque-Bitume comme projet d'école!
 Version: 1.0
 -------------------------------------------------------------- */
+:root {
+    --foret: #1E5220;
+    --asperge: #70B074;
+    --mindaro: #D4E084;
+    --vertfonce: #2a462c;
+    --poudre: #F6F9F1;
+  }
+  
+  .swiper {
+    height: 70vh;
+    background: rgba(212, 224, 132, 0.5);
+    text-align: left;
+    color: var(--foret);
+    border-radius: 25px;
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.337254902);
+  }
+  .swiper .row {
+    align-items: center;
+    height: 60%;
+  }
+  .swiper-main {
+    background: rgba(246, 249, 241, 0.5);
+  }
+  .swiper-image {
+    max-width: 80%;
+    width: 100%;
+    justify-self: center;
+    align-self: center;
+  }
+  .swiper-image .imgtext {
+    text-align: left;
+  }
+  .swiper-slide {
+    padding: 0 10% 0 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-slide .col-lg-6 {
+    display: flex;
+    justify-content: center;
+  }
+  .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    justify-self: center;
+    align-self: center;
+    border-radius: 25px;
+    object-fit: contain;
+  }
+  .swiper-slide .text {
+    justify-self: center;
+    align-self: center;
+  }
+  .swiper-slide h1 {
+    justify-self: center;
+    align-self: center;
+    text-align: end;
+    font-weight: bold;
+  }
+  .swiper-slide p {
+    font-size: 20px;
+    justify-self: center;
+    align-self: center;
+    text-align: end;
+  }
+  .swiper-button-prev, .swiper-button-next {
+    padding: 0 20px 0 20px;
+    color: var(--foret);
+  }
+  .swiper-pagination-bullet {
+    background-color: var(--foret);
+  }
+  
+  @media screen and (max-width: 992px) {
+    .swiper-image {
+      text-align: center;
+    }
+    .swiper-image .imgtext {
+      text-align: center;
+    }
+    .swiper-slide img {
+      width: 60%;
+    }
+    .swiper-slide p {
+      text-align: center;
+    }
+    .swiper-slide h1 {
+      text-align: center;
+      padding: 10px;
+      font-size: 30px;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    .swiper-main {
+      margin-top: 50px;
+    }
+    .swiper-slide img {
+      width: 100%;
+    }
+  }
+  .navbar {
+    background-color: var(--asperge);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.337254902);
+    width: 100%;
+    z-index: 1;
+  }
+  .navbar-brand img {
+    width: 100px;
+  }
+  .navbar .btnDonate {
+    background-color: var(--poudre);
+    border-radius: 50px;
+    border: var(--foret) 1px solid;
+    margin: 0 10px;
+    padding: 7px 25px;
+    color: var(--foret);
+    font-weight: bold;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.337254902);
+  }
+  .navbar .btnDonate:hover {
+    background-color: var(--foret);
+    color: var(--poudre);
+  }
+  .navbar .btnDonate:active {
+    transform: translateY(3px);
+    box-shadow: none;
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  
+  @media screen and (max-width: 991px) {
+    .navbar .btnDonate {
+      margin-bottom: 25px;
+    }
+  }
+  .leaf1 {
+    position: absolute;
+    z-index: 2;
+    top: -100px;
+    right: -100px;
+    transform: rotateZ(90deg) scaleY(-1);
+  }
+  .leaf2 {
+    position: absolute;
+    z-index: 2;
+    top: -250px;
+    left: -100px;
+    transform: rotateZ(20deg);
+  }
+  .leaf3 {
+    position: absolute;
+    z-index: 2;
+    top: -250px;
+    right: -100px;
+    transform: rotateZ(160deg) scaleY(-1);
+  }
+  
+  .card {
+    width: 100%;
+    position: relative;
+    object-fit: cover;
+    border-radius: 25px;
+    border: none;
+    max-height: 900px;
+    height: 100%;
+    transition-property: box-shadow, transform;
+    transition-duration: 0.3s;
+  }
+  .card-equipe {
+    background-image: url(../../sources/medias/extras/empty.png);
+  }
+  .card:hover {
+    box-shadow: 0px 0px 10px 5px var(--foret);
+    transform: scale(1.03);
+  }
+  .card-img-top {
+    height: 50vh;
+    border-radius: 25px;
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+  .card-img-fluid {
+    height: 20vh;
+    border-radius: 25px;
+    object-fit: cover;
+    width: 100%;
+    object-position: 50% 50%;
+  }
+  .card-body {
+    color: var(--vertfonce);
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 25px;
+    border: none;
+    font-weight: 900;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card-body-side {
+    text-decoration: none;
+    position: static;
+    height: 100%;
+    left: 0;
+  }
+  .card-body-side-prev {
+    text-align: right;
+  }
+  .card-body p {
+    margin: 0;
+  }
+  
+  section.volets .card-img-top {
+    height: 450px;
+  }
+  
+  .donate-image img {
+    width: 100%;
+    border-radius: 25px;
+  }
+  
+  .don > .container-fluid label {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--foret);
+  }
+  .don > .container-fluid input {
+    background: rgba(246, 249, 241, 0.5);
+    border-radius: 25px;
+    border: 2px solid var(--foret);
+  }
+  .don > .container-fluid button {
+    background-color: var(--poudre);
+    border-radius: 50px;
+    border: var(--foret) 1px solid;
+    width: 100%;
+    padding: 10px 25px;
+    font-size: 20px;
+    color: var(--foret);
+    font-weight: bold;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.337254902);
+  }
+  .don > .container-fluid button:hover {
+    background-color: var(--foret);
+    color: var(--poudre);
+  }
+  .don > .container-fluid button:active {
+    transform: translateY(3px);
+    box-shadow: none;
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .don .row {
+    position: relative;
+  }
+  .don .jar {
+    position: relative;
+    z-index: 2;
+    height: 70%;
+    margin-top: 20%;
+  }
+  .don .leafJar {
+    position: absolute;
+    width: 25%;
+    left: 45%;
+    top: -35%;
+  }
+  .don .leaf-jar {
+    position: absolute;
+    width: 20%;
+    z-index: 0;
+  }
+  .don .don-anim {
+    position: relative;
+  }
+  .don .formulaire {
+    position: relative;
+    z-index: 3;
+  }
+  
+  @media screen and (max-width: 992px) {
+    .don .jar {
+      width: 30%;
+    }
+    .don .leafJar {
+      position: absolute;
+      width: 10%;
+      left: 45%;
+      top: 0%;
+    }
+    .don .leaf-jar {
+      position: absolute;
+      width: 10%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .don .jar {
+      width: 40%;
+      margin-top: 30%;
+    }
+    .don .leafJar {
+      position: absolute;
+      width: 15%;
+      left: 45%;
+      top: 0%;
+    }
+    .don .leaf-jar {
+      position: absolute;
+      width: 13%;
+    }
+  }
+  footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--mindaro);
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 40px 10px;
+    color: var(--foret);
+    font-weight: bold;
+    box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.337254902);
+  }
+  footer a {
+    color: var(--foret);
+  }
+  footer .row {
+    align-items: flex-start;
+    justify-content: center;
+  }
+  footer .btnDonate {
+    background-color: var(--poudre);
+    border-radius: 50px;
+    border: var(--foret) 1px solid;
+    margin: auto;
+    padding: 7px 25px;
+    color: var(--foret);
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.337254902);
+    display: flex;
+    justify-content: center;
+  }
+  footer .btnDonate:hover {
+    background-color: var(--foret);
+    color: var(--poudre);
+  }
+  footer .btnDonate:active {
+    transform: translateY(3px);
+    box-shadow: none;
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  footer .socials {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: var(--foret);
+  }
+  
+  .footer--logo {
+    width: 100%;
+  }
+  .footer--logo img {
+    width: 10%;
+  }
+  .footer--logo--partenaire {
+    display: flex;
+  }
+  .footer--logo--partenaire:nth-child(odd) {
+    justify-content: flex-end;
+  }
+  .footer--logo--partenaire:nth-child(even) {
+    justify-content: flex-start;
+  }
+  .footer--logo--partenaire img {
+    width: 100%;
+    max-width: 100px;
+  }
+  
+  @media screen and (max-width: 992px) {
+    footer p {
+      font-size: 16px;
+    }
+    .footer--logo img {
+      width: 20%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .footer--logo--partenaire {
+      display: flex;
+    }
+    .footer--logo--partenaire:nth-child(odd) {
+      justify-content: center;
+    }
+    .footer--logo--partenaire:nth-child(even) {
+      justify-content: center;
+    }
+  }
+  .popup {
+    position: relative;
+    width: 100%;
+    background-color: var(--mindaro);
+    top: 0;
+    left: 0;
+    display: none;
+    padding: 25px;
+    color: var(--foret);
+    font-weight: bold;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.337254902);
+    z-index: 2;
+  }
+  .popup p {
+    margin: 0;
+  }
+  .popup .text {
+    justify-self: center;
+    align-self: center;
+    font-size: 20px;
+  }
+  .popup a {
+    width: fit-content;
+    justify-self: center;
+    align-self: center;
+  }
+  .popup button {
+    background-color: var(--poudre);
+    border-radius: 50px;
+    border: var(--foret) 1px solid;
+    width: 100%;
+    padding: 10px 25px;
+    font-size: 20px;
+    color: var(--foret);
+    font-weight: bold;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.337254902);
+  }
+  .popup button:hover {
+    background-color: var(--foret);
+    color: var(--poudre);
+  }
+  .popup button:active {
+    transform: translateY(3px);
+    box-shadow: none;
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .popup .bi {
+    color: var(--foret);
+    right: 0;
+    margin: 15px;
+  }
+  
+  .page404 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--foret);
+  }
+  .page404 h2 {
+    color: var(--foret);
+    font-size: 40px;
+  }
+  .page404 h3 {
+    color: var(--foret);
+  }
+  .page404 .col-lg-5 {
+    position: relative;
+  }
+  
+  .tree {
+    width: 100%;
+  }
+  
+  .leaf-no2 {
+    position: absolute;
+    top: -100%;
+    right: 10%;
+    transform: rotate(30deg);
+    width: 35%;
+  }
+  .leaf-no3 {
+    position: absolute;
+    top: -100%;
+    right: 10%;
+    transform: rotate(30deg);
+    width: 35%;
+  }
+  .leaf-solo {
+    position: absolute;
+    top: 35%;
+    right: 10%;
+    transform: rotate(30deg);
+    width: 35%;
+  }
+  
+  .motionPath {
+    position: absolute;
+    height: 60%;
+    left: 60%;
+    bottom: 10%;
+  }
+  .motionPath-wind {
+    bottom: 30%;
+    height: 70%;
+    left: -10%;
+    transform: rotate(-8deg);
+  }
+  .motionPath-wind2 {
+    height: 80%;
+    left: -5%;
+    bottom: 25%;
+    transform: rotate(-8deg);
+  }
+  
+  .cls-1 {
+    fill: none;
+  }
+  
+  @media screen and (max-width: 992px) {
+    .page404 {
+      padding-top: 30%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .page404 {
+      padding-top: 35%;
+    }
+  }
+  .hero-generique--background {
+    width: 100%;
+    height: 100%;
+    filter: opacity(0.7) blur(10px);
+  }
+  .hero-generique--background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .hero-generique--section {
+    height: 70vh;
+    padding: 0;
+    position: relative;
+  }
+  
+  .hero-generique--titre {
+    position: absolute;
+    bottom: 0;
+    font-size: 50px;
+    width: 100%;
+    font-weight: bolder;
+    background-color: var(--mindaro);
+    color: var(--foret);
+    border-top-right-radius: 2vw;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+  }
+  .hero-generique--titre .categorie {
+    font-size: 20px;
+    background-color: var(--asperge);
+    color: var(--poudre);
+    padding: 10px;
+    border-radius: 50px;
+  }
+  
+  .description-generale {
+    color: var(--foret);
+    text-align: left;
+  }
+  
+  .card-hub {
+    text-decoration: none;
+  }
+  .card-1 {
+    border: 10px solid var(--mindaro);
+    border-radius: 35px;
+  }
+  
+  .trier {
+    display: flex;
+    justify-content: flex-end;
+    z-index: 3;
+  }
+  .trier a {
+    color: var(--foret);
+    font-weight: bold;
+    font-size: 20px;
+    text-align: left;
+  }
+  
+  .accordion-item {
+    background: rgba(246, 249, 241, 0.3);
+    border: none;
+  }
+  
+  .accordion-button {
+    background: rgba(246, 249, 241, 0.5);
+  }
+  .accordion-button:not(.collapsed) {
+    background-color: var(--asperge);
+    color: var(--poudre);
+  }
+  
+  .accordion-button:focus {
+    background-color: var(--asperge);
+    color: var(--poudre);
+  }
+  
+  .section-formation, .section-volet {
+    text-align: left;
+  }
+  .section-formation figure, .section-volet figure {
+    float: right;
+    text-align: center;
+  }
+  .section-formation figure img, .section-volet figure img {
+    width: 50%;
+  }
+  
+  .deuxieme {
+    color: var(--foret);
+  }
+  .deuxieme .wrap .imgdescription p {
+    background-color: var(--poudre);
+  }
+  
+  .formation--grid.container .wrap, .volet--grid.container .wrap {
+    text-align: center;
+  }
+  
+  .wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  .wrap img {
+    width: 80%;
+    border-radius: 25px;
+  }
+  .wrap .imgdescription {
+    position: absolute;
+    bottom: 0;
+    opacity: 90%;
+    width: 81%;
+  }
+  .wrap .imgdescription p {
+    background-color: var(--mindaro);
+    padding: 2%;
+    margin: 0;
+  }
+  
+  .continue {
+    text-align: center;
+  }
+  
+  .section-equipe {
+    text-align: left;
+  }
+  
+  .equipe {
+    text-align: center;
+  }
+  
+  .btn-secondary {
+    background-color: var(--foret);
+  }
+  
+  .modal-content {
+    background-color: var(--poudre);
+    color: var(--vertfonce);
+  }
+  
+  .jasmine {
+    background-image: url(../sources/medias/apropos/jasmine.jpg);
+  }
+  
+  * {
+    font-family: "Playfair Display", serif;
+    box-sizing: border-box;
+  }
+  
+  html {
+    overflow-x: hidden;
+  }
+  
+  body {
+    max-width: 100%;
+    width: 100vw;
+    margin: 0;
+    position: relative;
+    overflow-x: hidden;
+    background-color: var(--mindaro);
+    text-align: center;
+  }
+  
+  h1 {
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    padding-bottom: 50px;
+    font-weight: bold;
+    font-size: 50px;
+    color: var(--foret);
+  }
+  
+  section {
+    width: 100%;
+    height: 120%;
+    position: relative;
+    padding: 10vw 0;
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.337254902);
+  }
+  section a {
+    color: var(--foret);
+    font-weight: bold;
+    font-size: 30px;
+  }
+  section:nth-child(even) {
+    background-color: var(--mindaro);
+  }
+  section:nth-child(odd) {
+    background-color: var(--poudre);
+  }
+  
+  header {
+    position: fixed;
+    z-index: 4;
+    width: 100%;
+  }
+  
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .formation--grid {
+    text-align: left;
+    font-size: 30px;
+  }
+  
+  .voirPlus {
+    display: flex;
+    justify-content: flex-end;
+    z-index: 3;
+  }
+  .voirPlus a {
+    color: var(--foret);
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  p {
+    font-size: 20px;
+  }
+  
+  small {
+    font-size: 70%;
+  }
+  
+  @media screen and (max-width: 576px) {
+    h1 {
+      font-size: 40px;
+      padding-bottom: 0px;
+    }
+  }/*# sourceMappingURL=style.css.map */

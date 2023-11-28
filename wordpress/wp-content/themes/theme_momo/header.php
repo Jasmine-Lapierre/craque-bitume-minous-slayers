@@ -33,21 +33,57 @@
 >
 
 <header>
-	<h1>
-		<a href="<?php echo esc_url( home_url( '/' ) ); // Lien vers la page d'accueil ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); // Title it with the blog name ?>" rel="home"><?php bloginfo( 'name' ); // Affiche le nom du site ?></a>
-	</h1>
+<?php get_template_part( 'partials/404' );?>
+	<nav class="navbar navbar-dark navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html"><img src="../sources/medias/extras/craquebitume.png"
+                        alt=""></a>
 
-	<nav>
+                <!-- Hamburger button -->
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                    aria-controls="mainNav" aria-expanded="false" aria-label="Affichage/masquage de la navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navigation -->
+                <div id="mainNav" class="collapse navbar-collapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="../index.html" class="nav-link ">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="hub_volets.html" class="nav-link ">Volets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="hub_formations.html" class="nav-link ">Formations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="equipe.html" class="nav-link ">Équipe</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="a_propos.html" class="nav-link active">À propos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="FAQ.html" class="nav-link ">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="dons.html" class="nav-link btnDonate">Donnez!</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
 		<?php 
 			// Affiche un menu si dans le tableau de bord un menu a été défini dans cet emplacement
-			wp_nav_menu( array( 'theme_location' => 'main-menu' ) );
+			wp_nav_menu([
+				'theme_location'=> 'main-menu',
+				'menu_class'    => 'navbar-nav',
+				'list_item_class'  => 'nav-item',
+				'link_item_class'     => 'nav-link',
+			  ]);
 		?>
 	</nav>
-
-	<?php 
-		// Affiche la description de site se trouvant dans "General Settings" dans l'admin WordPress
-		bloginfo( 'description' ); 
-	?>
 </header>
 
 <main><!-- Débute le contenu principal de notre site -->
