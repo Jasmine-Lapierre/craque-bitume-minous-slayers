@@ -33,7 +33,7 @@
 >
 
 <header>
-<?php get_template_part( 'partials/404' );?>
+
 	<nav class="navbar navbar-dark navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand" href="../index.html"><img src="../sources/medias/extras/craquebitume.png"

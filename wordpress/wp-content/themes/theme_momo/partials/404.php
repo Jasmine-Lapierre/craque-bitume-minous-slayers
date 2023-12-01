@@ -1,4 +1,4 @@
-<!-- <section class="page404">
+<section class="page404">
             <img src="../sources/medias/extras/leaf.png" class="leaf1 col-xl-2 col-lg-3 col-md-4 col-sm-4 pt-sm-4 mt-sm-5">
 
 

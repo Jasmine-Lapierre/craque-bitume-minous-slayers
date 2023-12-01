@@ -6,10 +6,11 @@ let closePopup = document.querySelector(".bi-x-lg");
 let enleve = localStorage.getItem("AppuieX");
 let menu = document.querySelector(".navbar-toggler");
 
-
 let banniereRajouter = function(){
-  popup.style.display = "flex";
+  if(popup){
+  popup.style.display = "flex";}
 }
+
 if(!enleve){
   console.log(enleve)
   banniereRajouter();
