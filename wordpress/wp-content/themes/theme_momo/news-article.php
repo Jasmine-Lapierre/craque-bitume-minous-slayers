@@ -1,7 +1,7 @@
 <?php 
 /**
- * 	Template Name: News Article
- * Template Post Type : formation
+ * 	Template Name: Formations
+ *  Template Post Type: formation, Formation, Formations, post, page
  */
 
 get_header(); // Affiche header.php
@@ -41,7 +41,7 @@ endif;
 							<img class="iconePetit" src="<?php bloginfo('template_url'); ?>/medias/detailformation/cooking.png" alt="">         <small itemprop="articleSection" class="categorie"><?php the_field('categorie'); ?>	</small>		<img class="iconePetit" src="<?php bloginfo('template_url'); ?>/medias/detailformation/<?php the_field('icone'); ?>.png" alt="">  
 <br>
                                 <h1 itemprop="name" class="formation--titre p-0"><?php the_field('formation_titre'); ?> -
-                                    <span itemprop="datePublished"><?php the_field('titre'); ?></span></h1>
+                                    <span itemprop="datePublished"><?php the_field('date'); ?></span></h1>
                             </div>
                         </div>
                     </div>
