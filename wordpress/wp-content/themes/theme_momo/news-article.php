@@ -1,7 +1,7 @@
 <?php 
 /**
  * 	Template Name: News Article
- * 	Identique à page, mais avec une barre latérale
+ * Template Post Type : formation
  */
 
 get_header(); // Affiche header.php
@@ -26,7 +26,178 @@ else : // Si aucune page n'a été trouvée
 	get_template_part( 'partials/404' ); // Affiche partials/404.php
 endif;
 ?>
+   <main class="section-formation">
+        <article itemscope itemtype="https://schema.org/Article">
 
+            <section class="hero-generique--section">
+                <div class="hero-generique--background">
+				<?php the_post_thumbnail(); ?>
+                </div>
+
+                <h1 class="hero-generique--titre">
+                    <div class="container">
+                        <div class="row">
+                            <div class="">
+							<img class="iconePetit" src="<?php bloginfo('template_url'); ?>/medias/detailformation/cooking.png" alt="">         <small itemprop="articleSection" class="categorie"><?php the_field('categorie'); ?>	</small>		<img class="iconePetit" src="<?php bloginfo('template_url'); ?>/medias/detailformation/<?php the_field('icone'); ?>.png" alt="">  
+<br>
+                                <h1 itemprop="name" class="formation--titre p-0"><?php the_field('formation_titre'); ?> -
+                                    <span itemprop="datePublished"><?php the_field('titre'); ?></span></h1>
+                            </div>
+                        </div>
+                    </div>
+                </h1>
+            </section>
+
+            <section>
+                <div itemprop="description" class="container description-generale">
+
+                    <h2>courte description sur les Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                        tempor metus nec arcu malesuada pharetra. Pellentesque hendrerit dapibus elit euismod hendrerit.
+                        Maecenas ut rhoncus arcu?
+                    </h2>
+
+                </div>
+            </section>
+            <div itemprop="articleBody">
+                <section>
+                    <img src="../sources\medias\extras\leaf.png"
+                    class="leaf3 col-xl-2 col-lg-3 pt-lg-0 col-md-4 mt-md-5 col-sm-4 col-6 pt-5 mt-5 pt-sm-4 mt-sm-5">        
+                    <div class="formation--grid container">
+                        <div class="row">
+                            <div class="col-12 mb-4 mt-5 pt-5 m-lg-0 p-lg-0 col-lg-6 order-lg-last">
+                                <div class="wrap">
+                                    <img itemprop="image"
+                                        src="../sources/medias/detailformation/developpement-durable_375x.webp" alt="">
+                                    <div class="imgdescription">
+                                        <p>Types de sols propices à la plantations</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 mb-5 pb-5 mb-lg-0 pb-lg-0 col-lg-6">
+
+                                <div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor metus
+                                        nec
+                                        arcu
+                                        malesuada pharetra. Ociosqu ad litora torquent per conubia nostra, per inceptos
+                                        himenaeos.</p>
+                                    <p> Fusce ac justo ut justo ornare eleifend. Donec dui libero, eleifend sed sodales
+                                        vitae,
+                                        consectetur sed eros. Class aptent taciti sociosqu ad litora torquent per
+                                        conubia
+                                        nostra, per
+                                        inceptos himenaeos. Vivamus iaculis volutpat egestas. Integer venenatis libero
+                                        ut
+                                        arcu
+                                        viverra
+                                        commodo. Nulla sagittis pretium mi. Duis non justo sit amet enim vehicula
+                                        porttitor.
+                                        Class
+                                        aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+                                        himenaeos.
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="deuxieme">
+                    <img src="../sources\medias\extras\leaf.png"
+                    class="leaf2 col-xl-2 col-lg-3 pt-lg-0 col-md-4 mt-md-5 col-sm-4 col-6 pt-5 mt-5 pt-sm-4 mt-sm-5">        
+                    <div class="formation--grid container">
+                        <div class="row">
+                            <div class="col-12 mb-4 mt-5 pt-5 m-lg-0 p-lg-0 col-lg-6">
+                                <div class="wrap">
+                                    <img itemprop="image" src="../sources/medias/detailformation/legumineuses_375x.webp"
+                                        alt="">
+                                    <div class="imgdescription">
+                                        <p>Types de sols propices à la plantations</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 mb-5 pb-5 mb-lg-0 pb-lg-0 col-lg-6">
+
+                                <div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor metus
+                                        nec
+                                        arcu
+                                        malesuada pharetra. Ociosqu ad litora torquent per conubia nostra, per inceptos
+                                        himenaeos.</p>
+                                    <p> Fusce ac justo ut justo ornare eleifend. Donec dui libero, eleifend sed sodales
+                                        vitae,
+                                        consectetur sed eros. Class aptent taciti sociosqu ad litora torquent per
+                                        conubia
+                                        nostra, per
+                                        inceptos himenaeos. Vivamus iaculis volutpat egestas. Integer venenatis libero
+                                        ut
+                                        arcu
+                                        viverra
+                                        commodo. Nulla sagittis pretium mi. Duis non justo sit amet enim vehicula
+                                        porttitor.
+                                        Class
+                                        aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+                                        himenaeos.
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            <section>
+                <img src="../sources\medias\extras\leaf.png"
+                class="leaf3 col-xl-2 col-lg-3 pt-lg-0 col-md-4 mt-md-5 col-sm-4 col-6 pt-5 mt-5 pt-sm-4 mt-sm-5">        
+                <div class="container">
+                    <div class="row">
+                        <h1 class="continue pb-4">CONTINUEZ VOTRE LECTURE</h1>
+
+                        <div class="col-md-6 col-12 py-2">
+                            <a href="formations.html">
+                                <div class="card">
+                                    <div class="row">
+                                        <div class="col-5">
+                                            <img src="../sources/medias/accueil/pexels-photo-121629_535x.webp"
+                                                class="card-img-fluid">
+                                        </div>
+                                        <div class="col-7">
+                                            <div class="card-body card-body-side card-body-side-prev">
+                                                <h3><strong>Description <br>
+                                                        <small>
+                                                            < Précédent</small></strong></h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-6 col-12 py-2">
+                            <a href="formations.html">
+                                <div class="card">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <div class="card-body card-body-side">
+                                                <h3><strong>Description <br>
+                                                        <small>Prochain ></small></strong></h3>
+                                            </div>
+                                        </div>
+                                        <div class="col-5">
+                                            <img src="../sources/medias/accueil/pexels-photo-121629_535x.webp"
+                                                class="card-img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+        </article>
+    </main>
 <?php 
 get_sidebar(); // Affiche le contenu de sidebar.php
 get_footer(); // Affiche footer.php 
