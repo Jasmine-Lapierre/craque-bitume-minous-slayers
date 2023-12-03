@@ -51,9 +51,7 @@ endif;
             <section>
                 <div itemprop="description" class="container description-generale">
 
-                    <h2>courte description sur les Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                        tempor metus nec arcu malesuada pharetra. Pellentesque hendrerit dapibus elit euismod hendrerit.
-                        Maecenas ut rhoncus arcu?
+                    <h2><?php the_field('description_generale'); ?>
                     </h2>
 
                 </div>
@@ -77,26 +75,7 @@ endif;
                             <div class="col-12 mb-5 pb-5 mb-lg-0 pb-lg-0 col-lg-6">
 
                                 <div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor metus
-                                        nec
-                                        arcu
-                                        malesuada pharetra. Ociosqu ad litora torquent per conubia nostra, per inceptos
-                                        himenaeos.</p>
-                                    <p> Fusce ac justo ut justo ornare eleifend. Donec dui libero, eleifend sed sodales
-                                        vitae,
-                                        consectetur sed eros. Class aptent taciti sociosqu ad litora torquent per
-                                        conubia
-                                        nostra, per
-                                        inceptos himenaeos. Vivamus iaculis volutpat egestas. Integer venenatis libero
-                                        ut
-                                        arcu
-                                        viverra
-                                        commodo. Nulla sagittis pretium mi. Duis non justo sit amet enim vehicula
-                                        porttitor.
-                                        Class
-                                        aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
-                                        himenaeos.
-                                    </p>
+                                <?php the_field('formation_contenu1'); ?>
 
                                 </div>
                             </div>
@@ -121,26 +100,8 @@ endif;
                             <div class="col-12 mb-5 pb-5 mb-lg-0 pb-lg-0 col-lg-6">
 
                                 <div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor metus
-                                        nec
-                                        arcu
-                                        malesuada pharetra. Ociosqu ad litora torquent per conubia nostra, per inceptos
-                                        himenaeos.</p>
-                                    <p> Fusce ac justo ut justo ornare eleifend. Donec dui libero, eleifend sed sodales
-                                        vitae,
-                                        consectetur sed eros. Class aptent taciti sociosqu ad litora torquent per
-                                        conubia
-                                        nostra, per
-                                        inceptos himenaeos. Vivamus iaculis volutpat egestas. Integer venenatis libero
-                                        ut
-                                        arcu
-                                        viverra
-                                        commodo. Nulla sagittis pretium mi. Duis non justo sit amet enim vehicula
-                                        porttitor.
-                                        Class
-                                        aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
-                                        himenaeos.
-                                    </p>
+                                <?php the_field('formation_contenu2'); ?>
+
 
                                 </div>
                             </div>
