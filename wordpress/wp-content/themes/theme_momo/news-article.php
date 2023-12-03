@@ -108,54 +108,26 @@ endif;
                         </div>
                     </div>
                 </section>
-            <section>
+                <?php wpb_posts_nav();?>
+
+           <!--          <section>
                 <img src="../sources\medias\extras\leaf.png"
                 class="leaf3 col-xl-2 col-lg-3 pt-lg-0 col-md-4 mt-md-5 col-sm-4 col-6 pt-5 mt-5 pt-sm-4 mt-sm-5">        
                 <div class="container">
                     <div class="row">
-                        <h1 class="continue pb-4">CONTINUEZ VOTRE LECTURE</h1>
+               <h1 class="continue pb-4">CONTINUEZ VOTRE LECTURE</h1>
 
                         <div class="col-md-6 col-12 py-2">
-                            <a href="formations.html">
                                 <div class="card">
                                     <div class="row">
-                                        <div class="col-5">
-                                            <img src="../sources/medias/accueil/pexels-photo-121629_535x.webp"
-                                                class="card-img-fluid">
-                                        </div>
-                                        <div class="col-7">
-                                            <div class="card-body card-body-side card-body-side-prev">
-                                                <h3><strong>Description <br>
-                                                        <small>
-                                                            < Précédent</small></strong></h3>
-                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
-                            </a>
                         </div>
-                        <div class="col-md-6 col-12 py-2">
-                            <a href="formations.html">
-                                <div class="card">
-                                    <div class="row">
-                                        <div class="col-7">
-                                            <div class="card-body card-body-side">
-                                                <h3><strong>Description <br>
-                                                        <small>Prochain ></small></strong></h3>
-                                            </div>
-                                        </div>
-                                        <div class="col-5">
-                                            <img src="../sources/medias/accueil/pexels-photo-121629_535x.webp"
-                                                class="card-img-fluid">
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
                     </div>
                 </div>
-            </section>
+            </section> -->
         </div>
         </article>
     </main>
