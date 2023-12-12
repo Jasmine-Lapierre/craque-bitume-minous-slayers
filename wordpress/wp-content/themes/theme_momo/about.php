@@ -14,7 +14,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 	<article>
 	<section class="hero-generique--section">
             <div class="hero-generique--background">
-                <img src="../sources/medias/accueil/intro-craque_1500x.webp" alt="">
+                <img src="<?php bloginfo('template_url'); ?>/medias/accueil/intro-craque_1500x.webp" alt="">
             </div>
             
             <h1 class="hero-generique--titre">
@@ -23,6 +23,9 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
         </section>
 
         <section>
+        <img src="<?php bloginfo('template_url'); ?>\medias\extras\leaf.png"
+            class="leaf3 col-xl-2 col-lg-3 pt-lg-0 col-md-4 mt-md-5 col-sm-4 col-6 pt-5 mt-5 pt-sm-4 mt-sm-5">
+
             <div class="container description-generale py-5 my-5 py-xl-0 my-xl-0">
 
                 <h2>

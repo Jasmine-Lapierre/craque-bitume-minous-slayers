@@ -1,0 +1,121 @@
+//Pied de page
+footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--mindaro);
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 40px 10px;
+    color: var(--foret);
+    font-weight: bold;
+    box-shadow: inset 0 3px 10px #00000056;
+
+    a {
+        color: var(--foret);
+    }
+
+    .row {
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .btnDonate {
+        background-color: var(--poudre);
+        border-radius: 50px;
+        border: var(--foret) 1px solid;
+        margin: auto;
+        padding: 7px 25px;
+        color: var(--foret);
+        font-weight: bold;
+        font-size: 16px;
+        box-shadow: 0 3px 10px #00000056;
+        display: flex;
+        justify-content: center;
+
+        &:hover {
+            background-color: var(--foret);
+            color: var(--poudre);
+        }
+
+        &:active {
+            transform: translateY(3px);
+            box-shadow: none;
+            transition: box-shadow .3s, transform .3s;
+        }
+
+    }
+
+    .socials {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        color: var(--foret);
+    }
+
+
+
+}
+
+.footer--logo {
+    width: 100%;
+
+    img {
+        width: 10%;
+    }
+
+    &--partenaire {
+        display: flex;
+
+        &:nth-child(odd) {
+            justify-content: flex-end;
+        }
+
+        &:nth-child(even) {
+            justify-content: flex-start;
+        }
+
+        img {
+            width: 100%;
+            max-width: 100px;
+        }
+    }
+
+}
+
+@media screen and (max-width: 992px) {
+    footer {
+        p {
+        font-size: 16px;
+    }
+    }
+
+    .footer--logo {
+        img {
+            width: 20%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+
+    .footer--logo {
+
+
+        &--partenaire {
+            display: flex;
+
+            &:nth-child(odd) {
+                justify-content: center;
+            }
+
+            &:nth-child(even) {
+                justify-content: center;
+            }
+        }
+
+    }
+}

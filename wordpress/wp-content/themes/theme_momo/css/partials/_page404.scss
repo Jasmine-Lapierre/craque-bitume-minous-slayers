@@ -1,0 +1,82 @@
+.page404 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--foret);
+    h2 {
+        color: var(--foret);
+        font-size: 40px;
+    }
+    h3 {
+        color: var(--foret);
+    }
+    .col-lg-5 {
+        position: relative;
+    }
+}
+
+.tree {
+    width: 100%;
+}
+
+.leaf {
+    &-no2 {
+        position: absolute;
+        top: -100%;
+        right: 10%;
+        transform: rotate(30deg);
+        width: 35%;
+    }
+    &-no3 {
+        position: absolute;
+        top: -100%;
+        right: 10%;
+        transform: rotate(30deg);
+        width: 35%;
+    }
+    &-solo {
+        position: absolute;
+        top: 35%;
+        right: 10%;
+        transform: rotate(30deg);
+        width: 35%;
+        }
+}
+
+.motionPath {
+    position: absolute;
+    height: 60%;
+    left: 60%;
+    bottom: 10%;
+    &-wind {
+        bottom: 30%;
+        height: 70%;
+        left: -10%;
+        transform: rotate(-8deg);
+
+        &2 {
+            height: 80%;
+            left: -5%;
+            bottom: 25%;
+            transform: rotate(-8deg);
+        }
+    }
+}
+
+.cls-1 {
+    fill: none;
+}
+
+
+@media screen and (max-width: 992px) {
+    .page404 {
+        padding-top: 30%;
+        
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .page404 {
+        padding-top: 35%;
+    }
+}

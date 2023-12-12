@@ -1,0 +1,21 @@
+.card {
+    &-hub {
+        text-decoration: none;
+    }
+    &-1  {
+        border: 10px solid var(--mindaro);
+        border-radius: 35px;
+    }
+}
+
+.trier {
+    display: flex;
+    justify-content: flex-end;
+    z-index: 3;
+    a {
+        color: var(--foret);
+        font-weight: bold;
+        font-size: 20px;
+        text-align: left;
+    }
+}

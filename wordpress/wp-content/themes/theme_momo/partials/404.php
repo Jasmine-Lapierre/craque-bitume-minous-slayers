@@ -1,5 +1,5 @@
 <section class="page404">
-            <img src="../sources/medias/extras/leaf.png" class="leaf1 col-xl-2 col-lg-3 col-md-4 col-sm-4 pt-sm-4 mt-sm-5">
+            <img src="<?php bloginfo('template_url'); ?>/medias/extras/leaf.png" class="leaf1 col-xl-2 col-lg-3 col-md-4 col-sm-4 pt-sm-4 mt-sm-5">
 
 
         <svg id="pathWindsvg" class="motionPath motionPath-wind" data-name="Calque 1"
@@ -16,10 +16,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5 order-lg-first col-md-12 order-last">
-                        <img src="../sources/medias/404/tree.svg" alt="tree" class="tree">
-                        <img src="../sources/medias/404/single_leaf.svg" alt="leaf" class="leaf-solo">
-                        <img src="../sources/medias/404/single_leaf.svg" alt="leaf" class="leaf-no2">
-                        <img src="../sources/medias/404/single_leaf.svg" alt="leaf" class="leaf-no3">
+                        <img src="<?php bloginfo('template_url'); ?>/medias/404/tree.svg" alt="tree" class="tree">
+                        <img src="<?php bloginfo('template_url'); ?>/medias/404/single_leaf.svg" alt="leaf" class="leaf-solo">
+                        <img src="<?php bloginfo('template_url'); ?>/medias/404/single_leaf.svg" alt="leaf" class="leaf-no2">
+                        <img src="<?php bloginfo('template_url'); ?>/medias/404/single_leaf.svg" alt="leaf" class="leaf-no3">
 
                         <svg id="pathFallsvg" class="motionPath motionPath-fall" data-name="Calque 1"
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1085.45 376.11">

@@ -1,0 +1,137 @@
+/*
+Theme Name: Craque-Bitume
+Author: Felix Testa Radovanovic, Jasmine Lapierre
+Author URI: https://github.com/Jasmine-Lapierre/craque-bitume-minous-slayers
+Description: Refonte de l'OBNL Craque-Bitume comme projet d'école!
+Version: 1.0
+-------------------------------------------------------------- */
+
+@use "sass:color";
+@use "partials/variables";
+@use "partials/swiper";
+@use "partials/navbar";
+@use "partials/feuilles";
+@use "partials/card";
+@use "partials/don";
+@use "partials/footer";
+@use "partials/popup";
+@use "partials/page404";
+@use "partials/hero_generique";
+@use "partials/description_base";
+@use "partials/hubs";
+@use "partials/FAQ";
+@use "partials/details";
+@use "partials/equipe";
+
+* {
+    font-family: 'Playfair Display', serif;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    max-width: 100%;
+    width: 100vw;
+    margin: 0;
+    position: relative;
+    overflow-x: hidden;
+    background-color: var(--mindaro);
+    text-align: center;
+}
+
+h1 {
+    justify-self: center;
+    align-self: center;    
+    text-align: center;
+    padding-bottom: 50px;
+    font-weight: bold;
+    font-size: 50px;
+    color: var(--foret);
+}
+
+//Sections de la page
+section {
+    width: 100%;
+    height: 120%;
+    position: relative;
+    padding: 10vw 0;
+    box-shadow: inset 0 5px 10px #00000056;
+    
+    a {
+    color: var(--foret);
+    font-weight: bold;
+    font-size: 30px;
+    
+}
+
+    &:nth-child(even) {
+        background-color: var(--poudre);
+
+    } 
+    
+    &:nth-child(odd) {
+        background-color: var(--mindaro);
+
+    }
+
+    &.formations {
+        background-color: var(--poudre);
+    }
+}
+
+//Header
+header {
+    position: fixed;
+    z-index: 4;
+    width: 100%;
+}
+
+//Row communs
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formation--grid{
+    text-align: left;
+    font-size: 30px;
+    
+}
+
+
+
+.voirPlus {
+    display: flex;
+    justify-content: flex-end;
+    z-index: 3;
+    a {
+        color: var(--foret);
+        font-weight: bold;
+        font-size: 20px;
+    }
+    
+}
+
+p {
+    font-size: 20px;
+}
+
+small {
+    font-size: 70%;
+}
+
+@media screen and (max-width: 576px) {
+    h1 {
+        font-size: 40px;
+        padding-bottom: 0px;
+    }
+}
+
+.iconePetit{
+    width: 15vw;
+    max-width: 10%;
+}

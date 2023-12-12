@@ -48,7 +48,7 @@ function add_style_and_js()  {
 	*/
 	wp_enqueue_style('bootstrap', "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");
 
-	wp_enqueue_style('default', get_template_directory_uri() . '/style.css?v='.time());
+	wp_enqueue_style('default', get_template_directory_uri() . '/css/style.css?v='.time());
 	wp_enqueue_style('font', "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 	/* Pour ajoutez une feuille de style supplémentaire, copier la ligne précédente et ajuster le chemin du fichier de façon relative vers votre nouveau fichier CSS */

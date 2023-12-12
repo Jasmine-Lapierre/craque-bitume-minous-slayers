@@ -1,3 +1,11 @@
+@charset "UTF-8";
+/*
+Theme Name: Craque-Bitume
+Author: Felix Testa Radovanovic, Jasmine Lapierre
+Author URI: https://github.com/Jasmine-Lapierre/craque-bitume-minous-slayers
+Description: Refonte de l'OBNL Craque-Bitume comme projet d'école!
+Version: 1.0
+-------------------------------------------------------------- */
 :root {
   --foret: #1E5220;
   --asperge: #70B074;
@@ -155,6 +163,13 @@
   transform: rotateZ(160deg) scaleY(-1);
 }
 
+/*
+Theme Name: Craque-Bitume
+Author: Felix Testa Radovanovic, Jasmine Lapierre
+Author URI: https://github.com/Jasmine-Lapierre/craque-bitume-minous-slayers
+Description: Refonte de l'OBNL Craque-Bitume comme projet d'école!
+Version: 1.0
+-------------------------------------------------------------- */
 .card {
   width: 100%;
   position: relative;
@@ -728,6 +743,9 @@ section:nth-child(even) {
 }
 section:nth-child(odd) {
   background-color: var(--mindaro);
+}
+section.formations {
+  background-color: var(--poudre);
 }
 
 header {

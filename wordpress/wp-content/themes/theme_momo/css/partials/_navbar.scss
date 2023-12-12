@@ -1,0 +1,42 @@
+//Navbar
+.navbar {
+    background-color: var(--asperge);
+    box-shadow: 0 3px 10px #00000056;
+    width: 100%;
+    z-index: 1;
+    &-brand {
+        img {
+            width: 100px;
+        }
+    }
+    .btnDonate {
+        background-color: var(--poudre);
+        border-radius: 50px;
+        border: var(--foret) 1px solid;
+        margin: 0 10px;
+        padding: 7px 25px;
+        color: var(--foret);
+        font-weight: bold;
+        box-shadow: 0 3px 10px #00000056;
+        
+        &:hover {
+            background-color: var(--foret);
+            color: var(--poudre);
+        }
+
+        &:active {
+            transform: translateY(3px);
+            box-shadow: none;
+            transition: box-shadow .3s,transform .3s;
+        }
+
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .navbar {
+        .btnDonate {
+            margin-bottom: 25px;
+        }
+    }
+}

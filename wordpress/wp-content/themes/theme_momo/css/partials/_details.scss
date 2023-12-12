@@ -1,0 +1,70 @@
+.section-formation, .section-volet {
+    text-align: left;
+
+
+
+
+    figure {
+        float: right;
+
+        img {
+            width: 50%;
+        }
+
+        text-align: center;
+    }
+}
+
+.deuxieme {
+    color: var(--foret);
+
+    .wrap {
+        .imgdescription {
+            p {
+                background-color: var(--poudre);
+            }
+
+        }
+
+    }
+}
+
+.formation--grid.container, .volet--grid.container {
+    .wrap {
+        text-align: center;
+    }
+}
+
+.wrap {
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    img {
+        width: 80%;
+        border-radius: 25px;
+    }
+
+
+    .imgdescription {
+        position: absolute;
+        bottom: 0;
+        opacity: 90%;
+        width: 81%;
+        
+
+        p {
+            background-color: var(--mindaro);
+            padding: 2%;
+            margin: 0;
+        }
+
+    }
+
+}
+
+.continue {
+    text-align: center;
+}
