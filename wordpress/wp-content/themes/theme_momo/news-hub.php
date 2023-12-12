@@ -28,7 +28,7 @@ endif;
 ?>
  <section class="hero-generique--section">
             <div class="hero-generique--background">
-                <img src="../sources/medias/accueil/intro-craque_1500x.webp" alt="">
+                <img src="<?php bloginfo('template_url'); ?>/medias/accueil/intro-craque_1500x.webp" alt="">
             </div>
 
             <h1 class="hero-generique--titre">
@@ -37,7 +37,7 @@ endif;
         </section>
 
         <section class="formations">
-            <img src="../sources\medias\extras\leaf.png"
+            <img src="<?php bloginfo('template_url'); ?>\medias\extras\leaf.png"
                 class="leaf3 col-xl-2 col-lg-3 col-md-4 mt-md-3 col-sm-4 col-5 pt-5 mt-5 pt-sm-4 mt-sm-5">
 
             <div class="container-xl container-fluid">
@@ -57,7 +57,7 @@ endif;
                     <div class="col-lg-4 col-md-6 col-sm-12 py-3">
                         <a href="formations.html">
                             <div class="card card-1">
-                                <img src="../sources/medias/accueil/pexels-photo-121629_535x.webp" class="card-img-top">
+                                <img src="<?php bloginfo('template_url'); ?>/medias/accueil/pexels-photo-121629_535x.webp" class="card-img-top">
                                 <div class="card-body">
                                     Description
                                 </div>
@@ -67,7 +67,7 @@ endif;
                     <div class="col-lg-4 col-md-6 col-sm-12 py-3">
                         <a href="formations.html">
                             <div class="card">
-                                <img src="../sources/medias/accueil/pexels-photo-121629_535x.webp" class="card-img-top">
+                                <img src="<?php bloginfo('template_url'); ?>/medias/accueil/pexels-photo-121629_535x.webp" class="card-img-top">
                                 <div class="card-body">
                                     Description
                                 </div>
@@ -79,7 +79,7 @@ endif;
 
                         <a href="formations.html">
                             <div class="card">
-                                <img src="../sources/medias/accueil/pexels-photo-121629_535x.webp" class="card-img-top">
+                                <img src="<?php bloginfo('template_url'); ?>/medias/accueil/pexels-photo-121629_535x.webp" class="card-img-top">
                                 <div class="card-body">
                                     Description
                                 </div>
@@ -90,7 +90,7 @@ endif;
 
                         <a href="formations.html">
                             <div class="card">
-                                <img src="../sources/medias/accueil/pexels-photo-121629_535x.webp" class="card-img-top">
+                                <img src="<?php bloginfo('template_url'); ?>/medias/accueil/pexels-photo-121629_535x.webp" class="card-img-top">
                                 <div class="card-body">
                                     Description
                                 </div>
@@ -100,7 +100,7 @@ endif;
                     <div class="col-lg-4 col-md-6 col-sm-12 py-3">
                         <a href="formations.html">
                             <div class="card">
-                                <img src="../sources/medias/accueil/pexels-photo-121629_535x.webp" class="card-img-top">
+                                <img src="<?php bloginfo('template_url'); ?>/medias/accueil/pexels-photo-121629_535x.webp" class="card-img-top">
                                 <div class="card-body">
                                     Description
                                 </div>
@@ -110,7 +110,7 @@ endif;
                     <div class="col-lg-4 col-md-6 col-sm-12 py-3">
                         <a href="formations.html">
                             <div class="card">
-                                <img src="../sources/medias/accueil/pexels-photo-121629_535x.webp" class="card-img-top">
+                                <img src="<?php bloginfo('template_url'); ?>/medias/accueil/pexels-photo-121629_535x.webp" class="card-img-top">
                                 <div class="card-body">
                                     Description
                                 </div>

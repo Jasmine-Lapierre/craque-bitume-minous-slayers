@@ -12,7 +12,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 ?>
 <article>
     <section class="hero">
-            <img src="../../sources/medias/extras/leaf.png"
+            <img src="<?php bloginfo('template_url'); ?>/medias/extras/leaf.png"
                 class="leaf1 col-xl-2 col-lg-3 col-md-4 mt-md-5 col-sm-4 col-6 pt-5 mt-5 pt-sm-4 mt-sm-5">
             <h1> </h1>
             <!-- Slider main container -->
@@ -25,7 +25,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
                             <div class="row">
                                 <div class="col-lg-6 col-md-12">
                                     <div class="swiper-image">
-                                        <img src="../../sources\medias\accueil\intro-craque_1500x.webp"
+                                        <img src="<?php bloginfo('template_url'); ?>\medias\accueil\intro-craque_1500x.webp"
                                             alt="intro-craque_1500x">
                                     </div>
                                 </div>
@@ -46,7 +46,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
                                 <div class="col-lg-6 col-md-12">
                                     <div class="swiper-image">
                                         <h1 class="imgtext">Notre produit en vedette</h1>
-                                        <img src="../../sources\medias\accueil\AmenagementComestible_720x.webp"
+                                        <img src="<?php bloginfo('template_url'); ?>\medias\accueil\AmenagementComestible_720x.webp"
                                             alt="produit-en-vedette">
                                     </div>
                                 </div>
@@ -64,7 +64,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
                             <div class="row">
                                 <div class="col-lg-6 col-md-12">
                                     <div class="swiper-image">
-                                        <img src="../../sources\medias\extras\Donate_0cd00f03-4f26-4a71-b4a0-a829377b4855_375x.webp"
+                                        <img src="<?php bloginfo('template_url'); ?>\medias\extras\Donate_0cd00f03-4f26-4a71-b4a0-a829377b4855_375x.webp"
                                             alt="donner">
                                     </div>
                                 </div>
@@ -91,7 +91,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 
         <!-- Volets -->
         <section class="voletsAcc">
-            <img src="../../sources\medias\extras\leaf.png"
+            <img src="<?php bloginfo('template_url'); ?>\medias\extras\leaf.png"
                 class="leaf2 col-xl-2 col-lg-3 col-md-4 mt-md-5 col-sm-4 col-6 pt-5 mt-5 pt-sm-4 mt-sm-5">
 
             <h1>NOS VOLETS</h1>
@@ -100,7 +100,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
                     <div class="col-lg-6 col-md-12 py-3">
                         <a href="pages/volets.html" class="card-hub">
                             <div class="card">
-                                <img src="../../sources/medias/accueil/pexels-photo-121629_535x.webp" class="card-img-top">
+                                <img src="<?php bloginfo('template_url'); ?>/medias/accueil/pexels-photo-121629_535x.webp" class="card-img-top">
                                 <div class="card-body">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit
                                         <br> <small> Lorem ipsum dolor sit amet, consectetur adipiscing elit</small>
@@ -112,7 +112,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
                     <div class="col-lg-6 col-md-12 py-3">
                         <a href="pages/volets.html" class="card-hub">
                             <div class="card">
-                                <img src="../../sources/medias/accueil/pexels-photo-121629_535x.webp" class="card-img-top">
+                                <img src="<?php bloginfo('template_url'); ?>/medias/accueil/pexels-photo-121629_535x.webp" class="card-img-top">
                                 <div class="card-body">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit
                                         <br> <small> Lorem ipsum dolor sit amet, consectetur adipiscing elit</small>
@@ -125,7 +125,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
                     <div class="col-lg-6 col-md-12 py-3">
                         <a href="pages/volets.html" class="card-hub">
                             <div class="card">
-                                <img src="../../sources/medias/accueil/pexels-photo-121629_535x.webp" class="card-img-top">
+                                <img src="<?php bloginfo('template_url'); ?>/medias/accueil/pexels-photo-121629_535x.webp" class="card-img-top">
                                 <div class="card-body">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit
                                         <br> <small> Lorem ipsum dolor sit amet, consectetur adipiscing elit</small>
@@ -139,7 +139,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
                     <div class="col-lg-6 col-md-12 py-3">
                         <a href="pages/volets.html" class="card-hub">
                             <div class="card">
-                                <img src="../../sources/medias/accueil/pexels-photo-121629_535x.webp" class="card-img-top">
+                                <img src="<?php bloginfo('template_url'); ?>/medias/accueil/pexels-photo-121629_535x.webp" class="card-img-top">
                                 <div class="card-body">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit
                                         <br> <small> Lorem ipsum dolor sit amet, consectetur adipiscing elit</small>
@@ -160,7 +160,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 
         <!-- Formations -->
         <section class="formations">
-            <img src="../../sources\medias\extras\leaf.png"
+            <img src="<?php bloginfo('template_url'); ?>\medias\extras\leaf.png"
                 class="leaf3 col-xl-2 col-lg-3 col-md-4 mt-md-5 col-sm-4 col-6 pt-5 mt-5 pt-sm-4 mt-sm-5">
 
             <h1>FORMATIONS RÉCENTES</h1>
@@ -170,7 +170,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
                     <div class="col-lg-4 col-md-12 py-3">
                         <a href="pages/formations.html" class="card-hub">
                             <div class="card">
-                                <img src="../../sources/medias/accueil/pexels-photo-121629_535x.webp" class="card-img-top">
+                                <img src="<?php bloginfo('template_url'); ?>/medias/accueil/pexels-photo-121629_535x.webp" class="card-img-top">
                                 <div class="card-body">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit
                                         <br> <small> Lorem ipsum dolor sit amet, consectetur adipiscing elit</small>
@@ -183,7 +183,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
                     <div class="col-lg-4 col-md-12 py-3">
                         <a href="pages/formations.html" class="card-hub">
                             <div class="card">
-                                <img src="../../sources/medias/accueil/pexels-photo-121629_535x.webp" class="card-img-top">
+                                <img src="<?php bloginfo('template_url'); ?>/medias/accueil/pexels-photo-121629_535x.webp" class="card-img-top">
                                 <div class="card-body">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit
                                         <br> <small> Lorem ipsum dolor sit amet, consectetur adipiscing elit</small>
@@ -196,7 +196,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
                     <div class="col-lg-4 col-md-12 py-3">
                         <a href="pages/formations.html" class="card-hub">
                             <div class="card">
-                                <img src="../../sources/medias/accueil/pexels-photo-121629_535x.webp" class="card-img-top">
+                                <img src="<?php bloginfo('template_url'); ?>/medias/accueil/pexels-photo-121629_535x.webp" class="card-img-top">
                                 <div class="card-body">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit
                                         <br> <small> Lorem ipsum dolor sit amet, consectetur adipiscing elit</small>
@@ -217,7 +217,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 
         <!-- Temoignage -->
         <section class="temoignage">
-            <img src="../../sources\medias\extras\leaf.png"
+            <img src="<?php bloginfo('template_url'); ?>\medias\extras\leaf.png"
                 class="leaf2 col-xl-2 col-lg-3 col-md-4 mt-md-5 col-sm-4 col-6 pt-5 mt-5 pt-sm-4 mt-sm-5">
 
             <h1>TÉMOIGNAGES</h1>
@@ -231,7 +231,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 
                                 <div class="col-lg-6 col-md-12">
                                     <div class="swiper-image">
-                                        <img src="../../sources/medias/accueil/temoignage_1.jpeg"
+                                        <img src="<?php bloginfo('template_url'); ?>/medias/accueil/temoignage_1.jpeg"
                                             alt="Rebecca Guillaume, membre de l'organisme">
                                     </div>
                                 </div>
@@ -251,7 +251,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 
                                 <div class="col-lg-6 col-md-12">
                                     <div class="swiper-image">
-                                        <img src="../../sources\medias\accueil\temoignage_2.jpeg"
+                                        <img src="<?php bloginfo('template_url'); ?>\medias\accueil\temoignage_2.jpeg"
                                             alt="Christine Hebert, membre de l'organisme">
                                     </div>
                                 </div>
@@ -273,7 +273,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
                             <div class="row">
                                 <div class="col-lg-6 col-md-12">
                                     <div class="swiper-image">
-                                        <img src="../../sources\medias\accueil\temoignage_3.jpeg"
+                                        <img src="<?php bloginfo('template_url'); ?>\medias\accueil\temoignage_3.jpeg"
                                             alt="Jérémy Bouilleux, membre de l'organisme">
                                     </div>
                                 </div>
@@ -303,7 +303,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 
         <!-- Dons -->
         <section class="don">
-            <img src="../../sources\medias\extras\leaf.png"
+            <img src="<?php bloginfo('template_url'); ?>\medias\extras\leaf.png"
                 class="leaf3 col-xl-2 col-lg-3 col-md-4 mt-md-5 col-sm-4 col-6 pt-5 mt-5 pt-sm-4 mt-sm-5">
 
             <h1>FAITES UN DON!</h1>
@@ -311,8 +311,8 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
                 <div class="row">
                     <div class="col-lg-6 order-lg-first order-last">
                         <div class="don-anim">
-                            <img src="../../sources/medias/accueil/jar.svg" alt="jar" class="jar">
-                            <img src="../../sources\medias\404\single_leaf.svg" alt="leaf" class="leaf-jar">
+                            <img src="<?php bloginfo('template_url'); ?>/medias/accueil/jar.svg" alt="jar" class="jar">
+                            <img src="<?php bloginfo('template_url'); ?>\medias\404\single_leaf.svg" alt="leaf" class="leaf-jar">
                             <svg class="leafJar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 205.534 980.863">
                                 <path id="pathJar" data-name="Path 2"
                                     d="M17.27,.14S-43.04,199.65,238.57,306.37c37.5,14.21,62.82,49.99,63.14,90.09,1.19,150.96-231,366.56-301.44,412.69"

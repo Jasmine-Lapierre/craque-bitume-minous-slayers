@@ -12,13 +12,25 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 ?>
 
 	<article>
-		<?php if (!is_front_page()) : // Si nous ne sommes PAS sur la page d'accueil ?>
-			<h2>
-				<?php the_title(); // Titre de la page ?>
-			</h2>
-		<?php endif; ?>
-		
-		<?php the_content(); // Contenu principal de la page ?>
+	<section class="hero-generique--section">
+            <div class="hero-generique--background">
+                <img src="../sources/medias/accueil/intro-craque_1500x.webp" alt="">
+            </div>
+            
+            <h1 class="hero-generique--titre">
+                <span class="formation--titre">À PROPOS DE CRAQUE-BITUME</span>
+            </h1>
+        </section>
+
+        <section>
+            <div class="container description-generale py-5 my-5 py-xl-0 my-xl-0">
+
+                <h2>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </h2>
+
+            </div>
+        </section>
 	</article>
 <?php endwhile; // Fermeture de la boucle
 
@@ -28,7 +40,5 @@ endif;
 ?>
 
 <?php 
-
-get_sidebar(); // Affiche le contenu de sidebar.php
 get_footer(); // Affiche footer.php 
 ?>

@@ -36,7 +36,7 @@
 
 	<nav class="navbar navbar-dark navbar-expand-lg">
             <div class="container">
-                <a class="navbar-brand" href="../index.html"><img src="../sources/medias/extras/craquebitume.png"
+                <a class="navbar-brand" href="<?php bloginfo('template_url'); ?>"><img src="../sources/medias/extras/craquebitume.png"
                         alt=""></a>
 
                 <!-- Hamburger button -->
@@ -47,34 +47,7 @@
 
                 <!-- Navigation -->
                 <div id="mainNav" class="collapse navbar-collapse">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a href="../index.html" class="nav-link ">Accueil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="hub_volets.html" class="nav-link ">Volets</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="hub_formations.html" class="nav-link ">Formations</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="equipe.html" class="nav-link ">Équipe</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="a_propos.html" class="nav-link active">À propos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="FAQ.html" class="nav-link ">FAQ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="dons.html" class="nav-link btnDonate">Donnez!</a>
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
-
-		<?php 
+                <?php 
 			// Affiche un menu si dans le tableau de bord un menu a été défini dans cet emplacement
 			wp_nav_menu([
 				'theme_location'=> 'main-menu',
@@ -83,6 +56,10 @@
 				'link_item_class'     => 'nav-link',
 			  ]);
 		?>
+                </div>
+            </div>
+
+
 	</nav>
 </header>
 
