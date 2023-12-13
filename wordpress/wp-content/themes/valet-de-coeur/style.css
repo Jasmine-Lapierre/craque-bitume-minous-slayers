@@ -1,0 +1,97 @@
+/*
+Theme Name: Montmorency
+Author: Simon Arnold
+Author URI: https://smnarnold.com
+Description: Thème de base pour apprendre à faire un site Wordpress.
+Version: 1.0
+-------------------------------------------------------------- */
+* { box-sizing: border-box; }
+
+:root {
+  --spacing: 20px;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body { background-image: url(./assets/bg-site.png); }
+
+.site-wrapper {
+  background-color: #fff;
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: var(--spacing);
+}
+
+nav {
+  background-color: #139ec1;
+  color: #fff;
+  margin: 0 calc(var(--spacing) * -1) 40px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0 var(--spacing);
+  margin: 0;
+}
+
+nav li { display: inline-block; }
+
+nav a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5em;
+}
+
+nav a:hover { background-color: rgba(0,0,0,0.1); }
+
+.game {
+  display: flex;
+  flex-direction: column;
+}
+
+.game__infos { margin-top: 20px; }
+
+.game__media img {
+  width: 100%;
+  height: auto;
+}
+
+.game__title {
+  font-size: 3rem;
+  color: #008DB6;
+  margin: 20px 0;
+}
+
+.game__stats {
+  display: flex;
+  justify-content: space-between;
+  color: #008DB6;
+  font-weight: bold;
+}
+
+footer { 
+  font-size: 12px;
+  text-align: center; 
+}
+
+@media (min-width: 576px) {
+  :root {
+    --spacing: 30px;
+  }
+
+  .game { flex-direction: row; }
+
+  .game__media,
+  .game__infos { flex: 0 0 50%; }
+
+  .game__infos { 
+    margin-top: 0; 
+    padding-left: var(--spacing);
+  }
+}
