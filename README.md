@@ -9,4 +9,4 @@
  [Tableau Trello](https://trello.com/b/zl7X3IQ8/craque-bitume-les-minous-slayers)
 
 
-[Site hébergé](http://les-minous-slayers.tim-momo.com/)
+[Site hébergé](http://les-minous-slayers.tim-momo.com/wordpress/)
