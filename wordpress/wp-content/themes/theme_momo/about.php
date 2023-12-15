@@ -12,7 +12,10 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 ?>
 
 	<article>
-	<section class="hero-generique--section">
+		<?php
+		get_template_part( 'partials/heros' ); 
+		get_template_part( 'partials/description' ); ?>
+<!--	<section class="hero-generique--section">
             <div class="hero-generique--background">
                 <img src="<?php bloginfo('template_url'); ?>/medias/accueil/intro-craque_1500x.webp" alt="">
             </div>
@@ -33,7 +36,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
                 </h2>
 
             </div>
-        </section>
+        </section> -->
 	</article>
 <?php endwhile; // Fermeture de la boucle
 

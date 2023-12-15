@@ -1,0 +1,10 @@
+{
+    "post_types": {
+      "formation": {},
+      "volet": {},
+      "equipe": {},
+		"question":{},
+		"extra":{},
+		"temoignage":{}
+	}
+  }

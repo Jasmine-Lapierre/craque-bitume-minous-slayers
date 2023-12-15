@@ -9,6 +9,9 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <meta name="viewport" content="width=device-width" />
+	<meta property="og:title" content="<?php the_title(); ?>" />
+    <meta property="og:description" content='<?php the_content();?>' />
+    <meta property="og:image" content="<?php the_post_thumbnail_url(); ?>" />
     <title>
         <?php bloginfo('name'); // Affiche le nom du blog ?> |
         <?php is_front_page() ? bloginfo('description') : wp_title(''); // si nous sommes sur la page d'accueil, affichez la description à partir des paramètres du site - sinon, affichez le titre du post ou de la page. ?>
@@ -33,16 +36,19 @@
 
     <header>
         <!-- Bannière popup -->
+								<?php
+                    				$extras = new WP_Query(array('post_type' => 'extra'));
+                    				while ($extras->have_posts()) : $extras->the_post();
+                				?>
         <div class="popup" id="banniere">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-6">
-                        <p class="text">Travail complété dans le cadre du cours Projet Web</p>
+                        <p class="text"><?php the_field('banner_text') ?></p>
 
                     </div>
                     <div class="col-5">
-                        <a href="https://craquebitume.org/"><button class="button">Accéder au vrai site de
-                                Craque-Bitume</button></a>
+                        <a href="https://craquebitume.org/"><button class="button"><?php the_field('banner_button') ?></button></a>
                     </div>
                     <div class="col-1">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
@@ -55,13 +61,13 @@
                 </div>
             </div>
         </div>
-
+							<?php endwhile; wp_reset_postdata(); ?>
 
         <nav class="navbar navbar-dark navbar-expand-lg">
             <div class="container">
-                <a class="navbar-brand" href="<?php bloginfo('template_url'); ?>"><img
+                <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); // Lien vers la page d'accueil ?>"><img
                         src="<?php bloginfo('template_url'); ?>/medias/extras/craquebitume.png" alt=""></a>
-
+				
                 <!-- Hamburger button -->
                 <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNav"
                     aria-controls="mainNav" aria-expanded="false" aria-label="Affichage/masquage de la navigation">
@@ -82,7 +88,12 @@
 			  ]);
 		?>
                         <li class="nav-item">
-                            <a href="pages/dons.html" class="nav-link btnDonate">Donnez!</a>
+														<?php
+                    				$extras = new WP_Query(array('post_type' => 'extra'));
+                    				while ($extras->have_posts()) : $extras->the_post();
+                				?>
+                            <a href="https://craquebitume.org/products/faites-un-don-a-craque-bitume" class="nav-link btnDonate" target="_blank"><?php the_field('don'); ?></a>
+							<?php endwhile; wp_reset_postdata(); ?>
                         </li>
                     </ul>
                 </div>

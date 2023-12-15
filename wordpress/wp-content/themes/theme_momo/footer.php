@@ -13,37 +13,42 @@
         <div class="container-fluid">
             <div class="row mb-4">
                 <div class="col-12">
-                    <a class="footer--logo" href="index.html">
+                    <a class="footer--logo" href="<?php echo esc_url( home_url( '/' ) ); // Lien vers la page d'accueil ?>">
                         <img src="<?php bloginfo('template_url'); ?>/medias/extras/craquebitume2.png" alt="">
                     </a>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-5 col-md-6 order-lg-1 pt-5">
-                    <h2><b>NOS PARTENAIRES</b></h2>
+								<?php
+                    				$extras = new WP_Query(array('post_type' => 'extra'));
+                    				while ($extras->have_posts()) : $extras->the_post();
+                				?>
+                    <h2><b><?php the_field('partenaires_text'); ?></b></h2>
+							<?php endwhile; wp_reset_postdata(); ?>
                     <div class="container">
                         <div class="row">
+								<?php
+                    				$partenaires = new WP_Query(array('post_type' => 'partenaire'));
+                    				while ($partenaires->have_posts()) : $partenaires->the_post();
+                				?>
                             <div class="col-md-6 col-3 footer--logo--partenaire p-2">
-                                <img src="<?php bloginfo('template_url'); ?>/medias/extras/partenaires_enattente.png" alt="">
+                                <a href="<?php echo the_field('url_company'); ?>"><?php the_post_thumbnail('small', array('class' => 'partner-icon')) ?></a>
                             </div>
-                            <div class="col-md-6 col-3 footer--logo--partenaire p-2">
-                                <img src="<?php bloginfo('template_url'); ?>/medias/extras/partenaires_enattente.png" alt="">
-                            </div>
-                            <div class="col-md-6 col-3 footer--logo--partenaire p-2">
-                                <img src="<?php bloginfo('template_url'); ?>/medias/extras/partenaires_enattente.png" alt="">
-                            </div>
-                            <div class="col-md-6 col-3 footer--logo--partenaire p-2">
-                                <img src="<?php bloginfo('template_url'); ?>/medias/extras/partenaires_enattente.png" alt="">
-                            </div>
+							<?php endwhile; wp_reset_postdata(); ?>
                         </div>
 
                     </div>
                 </div>
+								<?php
+                    				$extras = new WP_Query(array('post_type' => 'extra'));
+                    				while ($extras->have_posts()) : $extras->the_post();
+                				?>
                 <div class="col-lg-2 order-lg-2 col-md-12 col-sm-6 pb-sm-5 py-md-0 order-first">
-                    <a href="pages/dons.html" class="nav-link btnDonate">Donnez!</a>
+                    <a href="https://craquebitume.org/products/faites-un-don-a-craque-bitume" target="_blank" class="nav-link btnDonate"><?php the_field('don'); ?></a>
                 </div>
                 <div class="col-lg-5 col-md-6 order-lg-3 py-5">
-                    <h2><b>NOUS CONTACTER</b></h2>
+                    <h2><b><?php the_field('contacter_text'); ?></b></h2>
                     <div class="row">
                         <div class="col-12 py-2">
                             <img src="<?php bloginfo('template_url'); ?>/medias/extras/telephonne.svg" alt="" style="height: 40px;">
@@ -73,12 +78,11 @@
                 <div class="row order-lg-last">
                     <div class="col-12">
                         <small>
-                            <p>© 2023,Craque-Bitume, Minous-slayers | <a
-                                    href="https://github.com/Jasmine-Lapierre/craque-bitume-minous-slayers/">Lien vers
-                                    le github</a></p>
+                            <p>© 2023, Craque-Bitume, Minous-slayers | <a
+                                    href="https://github.com/Jasmine-Lapierre/craque-bitume-minous-slayers/"><?php the_field('github') ?></a></p>
 
                         </small>
-
+							<?php endwhile; wp_reset_postdata(); ?>
                     </div>
 
                 </div>

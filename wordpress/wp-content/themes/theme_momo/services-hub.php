@@ -12,7 +12,10 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 ?>
 
 	<article>
-	<section class="hero-generique--section">
+				<?php
+		get_template_part( 'partials/heros' ); 
+		get_template_part( 'partials/description' ); ?>
+	<!-- <section class="hero-generique--section">
             <div class="hero-generique--background">
                 <img src="<?php bloginfo('template_url'); ?>/medias/accueil/intro-craque_1500x.webp" alt="">
             </div>
@@ -34,58 +37,31 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
                 </h2>
 
             </div>
-        </section>
+        </section> -->
 
         <section class="volets">
             <img src="<?php bloginfo('template_url'); ?>\medias\extras\leaf.png"
                 class="leaf3 col-xl-2 col-lg-3 col-md-4 mt-md-5 col-6 pt-5 mt-5">
 
-            <div class="container-fluid">
+            <div class="container">
                 <div class="row">
-                    <div class="col-lg-3 col-md-6 col-12 py-5">
-                        <a href="volets.html" class="card-hub">
+					<?php
+                    	$volets = new WP_Query(array('post_type' => 'volet'));
+                    	while ($volets->have_posts()) : $volets->the_post();
+                	?>
+                    <div class="col-lg-4 col-md-4 col-12 py-5">
+                        <a href="<?php echo get_permalink($the_post); ?>" class="card-hub">
                             <div class="card">
-                                <img src="<?php bloginfo('template_url'); ?>/medias/accueil/pexels-photo-121629_535x.webp" class="card-img-top">
+                                <?php the_post_thumbnail('large', array('class' => 'card-img-top')); ?>
                                 <div class="card-body">
-                                    Description
+                                    <p><?php the_field('volet_titre'); ?>
+                                		<br> <small> <?php the_field('description_courte'); ?></small>
+                            		</p>
                                 </div>
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-12 py-5">
-                        <a href="volets.html" class="card-hub">
-                            <div class="card">
-                                <img src="<?php bloginfo('template_url'); ?>/medias/accueil/pexels-photo-121629_535x.webp" class="card-img-top">
-                                <div class="card-body">
-                                    Description
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-12 py-5">
-
-                        <a href="volets.html" class="card-hub">
-                            <div class="card">
-                                <img src="<?php bloginfo('template_url'); ?>/medias/accueil/pexels-photo-121629_535x.webp" class="card-img-top">
-                                <div class="card-body">
-                                    Description
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-12 py-5">
-
-                        <a href="volets.html" class="card-hub">
-                            <div class="card">
-                                <img src="<?php bloginfo('template_url'); ?>/medias/accueil/pexels-photo-121629_535x.webp" class="card-img-top">
-                                <div class="card-body">
-                                    Description
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
+					<?php endwhile; wp_reset_postdata(); ?>
                 </div>
             </div>
 

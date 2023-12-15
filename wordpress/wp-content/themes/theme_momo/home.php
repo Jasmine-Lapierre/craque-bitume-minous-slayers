@@ -14,7 +14,6 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
     <section class="hero">
             <img src="<?php bloginfo('template_url'); ?>/medias/extras/leaf.png"
                 class="leaf1 col-xl-2 col-lg-3 col-md-4 mt-md-5 col-sm-4 col-6 pt-5 mt-5 pt-sm-4 mt-sm-5">
-            <h1> </h1>
             <!-- Slider main container -->
             <div class="swiper swiper-main mx-md-5">
                 <!-- Additional required wrapper -->
@@ -31,48 +30,61 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
                                 </div>
                                 <div class="col-lg-6 col-md-12">
                                     <div class="text">
-                                        <h1>La nature et l'écocitoyenneté vous interpellent?</h1>
-                                        <p>Craque-bitume, un collectif d'écologie urbaine, pourrait bien être l'écho à
-                                            votre appel!</p>
+                                        <h1><?php the_field('swiper_1_titre'); ?></h1>
+                                        <p><?php the_field('swiper_1_desc'); ?></p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                     </div>
+								<?php
+                    				$formations = new WP_Query(array('post_type' => 'formation', 'posts_per_page' => 1));
+                    				while ($formations->have_posts()) : $formations->the_post();
+                				?>
                     <div class="swiper-slide">
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-6 col-md-12">
                                     <div class="swiper-image">
-                                        <h1 class="imgtext">Notre produit en vedette</h1>
-                                        <img src="<?php bloginfo('template_url'); ?>\medias\accueil\AmenagementComestible_720x.webp"
-                                            alt="produit-en-vedette">
+                                        <a href="<?php echo get_permalink($the_post); ?>">
+										<?php the_post_thumbnail('large', array('alt' => 'produit-en-vedette')); ?>
+                                        </a>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-12">
                                     <div class="text">
-                                        <h1>ABC de l'aménagement comestible</h1>
-                                        <p>Voir les détails</p>
+                                    <a href="<?php echo get_permalink($the_post); ?>">
+                                        <h2 class="imgtext"><?php the_field('produit_vedette'); ?></h2>
+                                        <h1><?php the_field('formation_titre'); ?></h1>
+                                        <p><?php the_field('voir_plus'); ?></p>
+                                    </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+				<?php   endwhile;
+                wp_reset_postdata(); 
+                ?>
                     <div class="swiper-slide">
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-6 col-md-12">
                                     <div class="swiper-image">
+										<a href="<?php echo esc_url( home_url( '/#donateJump' ) ); // Lien vers la page d'accueil ?>">
                                         <img src="<?php bloginfo('template_url'); ?>\medias\extras\Donate_0cd00f03-4f26-4a71-b4a0-a829377b4855_375x.webp"
                                             alt="donner">
+											</a>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-12">
+									<a href="<?php echo esc_url( home_url( '/#donateJump' ) ); // Lien vers la page d'accueil ?>">
                                     <div class="text">
-                                        <h1>Faites un don!</h1>
-                                        <p>Votre support est apprécié!</p>
+                                        <h1><?php the_field('swiper_3_titre'); ?></h1>
+                                        <p><?php the_field('swiper_3_desc'); ?></p>
                                     </div>
+									</a>
                                 </div>
                             </div>
                         </div>
@@ -94,62 +106,29 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
             <img src="<?php bloginfo('template_url'); ?>\medias\extras\leaf.png"
                 class="leaf2 col-xl-2 col-lg-3 col-md-4 mt-md-5 col-sm-4 col-6 pt-5 mt-5 pt-sm-4 mt-sm-5">
 
-            <h1>NOS VOLETS</h1>
+            <h1><?php the_field('volets_titre'); ?></h1>
             <div class="container-xl container-fluid">
                 <div class="row">
-                    <div class="col-lg-6 col-md-12 py-3">
-                        <a href="pages/volets.html" class="card-hub">
+                <?php
+                    $volets = new WP_Query(array('post_type' => 'volet', 'posts_per_page' => 3));
+                    while ($volets->have_posts()) : $volets->the_post();
+                ?>
+                    <div class="col-lg-4 col-md-12 py-3">
+                        <a href="<?php echo the_permalink($the_post) ?>" class="card-hub">
                             <div class="card">
-                                <img src="<?php bloginfo('template_url'); ?>/medias/accueil/pexels-photo-121629_535x.webp" class="card-img-top">
+                                 <?php the_post_thumbnail('large', array('class' => 'card-img-top')); ?>
                                 <div class="card-body">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                                        <br> <small> Lorem ipsum dolor sit amet, consectetur adipiscing elit</small>
-                                    </p>
+                                    <p><?php the_field('volet_titre'); ?>
+                                		<br> <small> <?php the_field('description_courte'); ?></small>
+                            		</p>
                                 </div>
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-6 col-md-12 py-3">
-                        <a href="pages/volets.html" class="card-hub">
-                            <div class="card">
-                                <img src="<?php bloginfo('template_url'); ?>/medias/accueil/pexels-photo-121629_535x.webp" class="card-img-top">
-                                <div class="card-body">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                                        <br> <small> Lorem ipsum dolor sit amet, consectetur adipiscing elit</small>
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
+				<?php   endwhile;
+                wp_reset_postdata(); 
+                ?>
 
-                    </div>
-                    <div class="col-lg-6 col-md-12 py-3">
-                        <a href="pages/volets.html" class="card-hub">
-                            <div class="card">
-                                <img src="<?php bloginfo('template_url'); ?>/medias/accueil/pexels-photo-121629_535x.webp" class="card-img-top">
-                                <div class="card-body">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                                        <br> <small> Lorem ipsum dolor sit amet, consectetur adipiscing elit</small>
-                                    </p>
-
-                                </div>
-                            </div>
-                        </a>
-
-                    </div>
-                    <div class="col-lg-6 col-md-12 py-3">
-                        <a href="pages/volets.html" class="card-hub">
-                            <div class="card">
-                                <img src="<?php bloginfo('template_url'); ?>/medias/accueil/pexels-photo-121629_535x.webp" class="card-img-top">
-                                <div class="card-body">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                                        <br> <small> Lorem ipsum dolor sit amet, consectetur adipiscing elit</small>
-                                    </p>
-
-                                </div>
-                            </div>
-                        </a>
-
-                    </div>
 
                 </div>
             </div>
@@ -163,51 +142,32 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
             <img src="<?php bloginfo('template_url'); ?>\medias\extras\leaf.png"
                 class="leaf3 col-xl-2 col-lg-3 col-md-4 mt-md-5 col-sm-4 col-6 pt-5 mt-5 pt-sm-4 mt-sm-5">
 
-            <h1>FORMATIONS RÉCENTES</h1>
+            <h1><?php the_field('formations_recentes'); ?></h1>
 
             <div class="container-xl container-fluid">
                 <div class="row">
+                <?php
+                    $formations = new WP_Query(array('post_type' => 'formation', 'posts_per_page' => 3));
+                    while ($formations->have_posts()) : $formations->the_post();
+                ?>
                     <div class="col-lg-4 col-md-12 py-3">
-                        <a href="pages/formations.html" class="card-hub">
+                        <a href="<?php echo the_permalink($the_post) ?>" class="card-hub">
                             <div class="card">
-                                <img src="<?php bloginfo('template_url'); ?>/medias/accueil/pexels-photo-121629_535x.webp" class="card-img-top">
+                                 <?php the_post_thumbnail('large', array('class' => 'card-img-top')); ?>
                                 <div class="card-body">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                                        <br> <small> Lorem ipsum dolor sit amet, consectetur adipiscing elit</small>
+                                    <p><?php the_field('formation_titre'); ?>
+                                        <br> <small> <?php the_field('date'); ?></small>
                                     </p>
 
                                 </div>
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-4 col-md-12 py-3">
-                        <a href="pages/formations.html" class="card-hub">
-                            <div class="card">
-                                <img src="<?php bloginfo('template_url'); ?>/medias/accueil/pexels-photo-121629_535x.webp" class="card-img-top">
-                                <div class="card-body">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                                        <br> <small> Lorem ipsum dolor sit amet, consectetur adipiscing elit</small>
-                                    </p>
-
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-12 py-3">
-                        <a href="pages/formations.html" class="card-hub">
-                            <div class="card">
-                                <img src="<?php bloginfo('template_url'); ?>/medias/accueil/pexels-photo-121629_535x.webp" class="card-img-top">
-                                <div class="card-body">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                                        <br> <small> Lorem ipsum dolor sit amet, consectetur adipiscing elit</small>
-                                    </p>
-
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+				<?php   endwhile;
+                wp_reset_postdata(); 
+                ?>
                     <div class="col-12 pe-5 voirPlus">
-                        <a href="pages/hub_formations.html">Voir plus ></a>
+                        <a href="<?php echo esc_url( home_url( '/index.php/hub-de-formations/' ) ); ?>"><?php the_field('voir_plus'); ?></a>
                     </div>
                 </div>
             </div>
@@ -220,76 +180,36 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
             <img src="<?php bloginfo('template_url'); ?>\medias\extras\leaf.png"
                 class="leaf2 col-xl-2 col-lg-3 col-md-4 mt-md-5 col-sm-4 col-6 pt-5 mt-5 pt-sm-4 mt-sm-5">
 
-            <h1>TÉMOIGNAGES</h1>
+            <h1><?php the_field('temoignage_titre'); ?></h1>
             <div class="swiper mx-md-5">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
+					<?php
+                    	$temoignages = new WP_Query(array('post_type' => 'temoignage', 'posts_per_page' => 3));
+                    	while ($temoignages->have_posts()) : $temoignages->the_post();
+                	?>
                     <div class="swiper-slide">
                         <div class="container">
                             <div class="row">
 
                                 <div class="col-lg-6 col-md-12">
                                     <div class="swiper-image">
-                                        <img src="<?php bloginfo('template_url'); ?>/medias/accueil/temoignage_1.jpeg"
-                                            alt="Rebecca Guillaume, membre de l'organisme">
+                                        <?php the_post_thumbnail('large') ?>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-12">
                                     <div class="text">
-                                        <h1>"Un bon fond de retraite investie"</h1>
-                                        <p>wow c'est vrmnt le fun ça, j'ai bien investie mes fonds de retraite</p>
-                                        <p>- Rebecca Guillaume, contributrice depuis 2020</p>
+                                        <h1>"<?php the_field('temoignage') ?>"</h1>
+                                        <p>- <?php the_title() ?></p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="container">
-                            <div class="row">
-
-                                <div class="col-lg-6 col-md-12">
-                                    <div class="swiper-image">
-                                        <img src="<?php bloginfo('template_url'); ?>\medias\accueil\temoignage_2.jpeg"
-                                            alt="Christine Hebert, membre de l'organisme">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-12">
-                                    <div class="text">
-                                        <h1>"On voit vraiment l'impact de nos dons"</h1>
-                                        <p>Craque-Bitume est très transparent dans l'utilisation de leurs dons! Je sais
-                                            toujours
-                                            où va
-                                            mon argent!</p>
-                                        <p>- Christine Hebert, contributrice depuis 2019</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-6 col-md-12">
-                                    <div class="swiper-image">
-                                        <img src="<?php bloginfo('template_url'); ?>\medias\accueil\temoignage_3.jpeg"
-                                            alt="Jérémy Bouilleux, membre de l'organisme">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-12">
-                                    <div class="text">
-                                        <h1>"Ici c'est comme ma famille"</h1>
-                                        <p>Je me sens respecté et apprécié, je suis heureux d'investir mon temps et mon
-                                            argent
-                                            dans cet
-                                            organisme!</p>
-                                        <p>- Jérémy Bouilleux, contributeur depuis 2017</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+					<?php   endwhile;
+                wp_reset_postdata(); 
+                ?>
                 </div>
                 <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>
@@ -302,11 +222,11 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 
 
         <!-- Dons -->
-        <section class="don">
+        <section class="don" id="donateJump">
             <img src="<?php bloginfo('template_url'); ?>\medias\extras\leaf.png"
                 class="leaf3 col-xl-2 col-lg-3 col-md-4 mt-md-5 col-sm-4 col-6 pt-5 mt-5 pt-sm-4 mt-sm-5">
 
-            <h1>FAITES UN DON!</h1>
+            <h1><?php the_field('swiper_3_titre'); ?></h1>
             <div class="container-xl container-fluid">
                 <div class="row">
                     <div class="col-lg-6 order-lg-first order-last">
@@ -326,25 +246,25 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
                         <div class="formulaire">
                             <form>
                                 <div class="form-group py-3">
-                                    <label for="prenom">Prénom</label><br>
+                                    <label for="prenom"><?php the_field('prenom') ?></label><br>
                                     <input type="text" id="prenom" class="container-fluid py-2 mt-2" placeholder="John">
                                 </div>
                                 <div class="form-group py-3">
-                                    <label for="nom">Nom</label><br>
+                                    <label for="nom"><?php the_field('nom') ?></label><br>
                                     <input type="text" id="nom" class="container-fluid py-2 mt-2" placeholder="Doe">
                                 </div>
                                 <div class="form-group py-3">
-                                    <label for="email">Adresse courriel</label>
+                                    <label for="email"><?php the_field('adresse_courriel') ?></label>
                                     <input type="email" id="email" class="container-fluid py-2 mt-2"
                                         placeholder="email@exemple.com">
                                 </div>
                                 <div class="form-group py-3 pb-5">
-                                    <label for="number">Montant</label><br>
+                                    <label for="number"><?php the_field('montant') ?></label><br>
 
                                     <input type="number" id="number" value="0" class="container-fluid py-2 mt-2" min="0"
                                         step="1">
                                 </div>
-                                <button type="submit" class="py-2 mt-2 btn">Soumettre</button>
+                                <button type="submit" class="py-2 mt-2 btn"><?php the_field('soumettre') ?></button>
                             </form>
                         </div>
                     </div>

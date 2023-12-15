@@ -714,6 +714,7 @@ body {
   overflow-x: hidden;
   background-color: var(--mindaro);
   text-align: center;
+  padding: 0 !important;
 }
 
 h1 {
@@ -777,11 +778,11 @@ header {
 }
 
 p {
-  font-size: 20px;
+  font-size: 32px;
 }
 
 small {
-  font-size: 70%;
+  font-size: 75%;
 }
 
 @media screen and (max-width: 576px) {

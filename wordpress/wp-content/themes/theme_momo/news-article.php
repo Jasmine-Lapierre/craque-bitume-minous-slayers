@@ -38,8 +38,10 @@ endif;
                     <div class="container">
                         <div class="row">
                             <div class="">
-							<img class="iconePetit" src="<?php bloginfo('template_url'); ?>/medias/detailformation/cooking.png" alt="">         <small itemprop="articleSection" class="categorie"><?php the_field('categorie'); ?>	</small>		<img class="iconePetit" src="<?php bloginfo('template_url'); ?>/medias/detailformation/<?php the_field('icone'); ?>.png" alt="">  
-<br>
+							<img class="iconePetit" src="<?php bloginfo('template_url'); ?>/medias/detailformation/<?php the_field('formations_logo'); ?>.png" alt="">         
+								<small itemprop="articleSection" class="categorie"><?php the_field('categorie'); ?> </small>		
+								<img class="iconePetit envers" src="<?php bloginfo('template_url'); ?>/medias/detailformation/<?php the_field('formations_logo'); ?>.png" alt="">  
+								<br>
                                 <h1 itemprop="name" class="formation--titre p-0"><?php the_field('formation_titre'); ?> -
                                     <span itemprop="datePublished"><?php the_field('date'); ?></span></h1>
                             </div>
@@ -48,27 +50,17 @@ endif;
                 </h1>
             </section>
 
-            <section>
-                <div itemprop="description" class="container description-generale">
+					<?php get_template_part( 'partials/description' ); ?> 
 
-                    <h2><?php the_field('description_generale'); ?>
-                    </h2>
-
-                </div>
-            </section>
             <div itemprop="articleBody">
                 <section>
-                    <img src="../sources\medias\extras\leaf.png"
+                    <img src="<?php bloginfo('template_url'); ?>\medias\extras\leaf.png"
                     class="leaf3 col-xl-2 col-lg-3 pt-lg-0 col-md-4 mt-md-5 col-sm-4 col-6 pt-5 mt-5 pt-sm-4 mt-sm-5">        
                     <div class="formation--grid container">
                         <div class="row">
                             <div class="col-12 mb-4 mt-5 pt-5 m-lg-0 p-lg-0 col-lg-6 order-lg-last">
                                 <div class="wrap">
-                                    <img itemprop="image"
-                                        src="../sources/medias/detailformation/developpement-durable_375x.webp" alt="">
-                                    <div class="imgdescription">
-                                        <p>Types de sols propices à la plantations</p>
-                                    </div>
+                                    <img itemprop="image" src="<?php the_field('image_1') ?>" alt="">
                                 </div>
                             </div>
 
@@ -83,17 +75,13 @@ endif;
                     </div>
                 </section>
                 <section class="deuxieme">
-                    <img src="../sources\medias\extras\leaf.png"
+                    <img src="<?php bloginfo('template_url'); ?>\medias\extras\leaf.png"
                     class="leaf2 col-xl-2 col-lg-3 pt-lg-0 col-md-4 mt-md-5 col-sm-4 col-6 pt-5 mt-5 pt-sm-4 mt-sm-5">        
                     <div class="formation--grid container">
                         <div class="row">
                             <div class="col-12 mb-4 mt-5 pt-5 m-lg-0 p-lg-0 col-lg-6">
                                 <div class="wrap">
-                                    <img itemprop="image" src="../sources/medias/detailformation/legumineuses_375x.webp"
-                                        alt="">
-                                    <div class="imgdescription">
-                                        <p>Types de sols propices à la plantations</p>
-                                    </div>
+                                    <img itemprop="image" src="<?php the_field('image_2') ?>" alt="">
                                 </div>
                             </div>
 
@@ -108,30 +96,93 @@ endif;
                         </div>
                     </div>
                 </section>
-                <?php wpb_posts_nav();?>
+				<?php
+    $next_post = get_next_post();
+    $prev_post = get_previous_post();
+     
+    if ( $next_post || $prev_post ) : ?>
 
-           <!--          <section>
-                <img src="../sources\medias\extras\leaf.png"
-                class="leaf3 col-xl-2 col-lg-3 pt-lg-0 col-md-4 mt-md-5 col-sm-4 col-6 pt-5 mt-5 pt-sm-4 mt-sm-5">        
-                <div class="container">
+
+
+
+
+
+<section>
+    <img src="<?php bloginfo('template_url'); ?>\medias\extras\leaf.png"
+        class="leaf3 col-xl-2 col-lg-3 pt-lg-0 col-md-4 mt-md-5 col-sm-4 col-6 pt-5 mt-5 pt-sm-4 mt-sm-5">
+    <div class="container">
+        <div class="row">
+								<?php
+                    				$extras = new WP_Query(array('post_type' => 'extra'));
+                    				while ($extras->have_posts()) : $extras->the_post();
+                				?>
+            <h1 class="continue pb-4"><?php the_field('continue_text') ?></h1>
+							<?php endwhile; wp_reset_postdata(); ?>
+            <?php if ( ! empty( $prev_post ) ) : ?>
+
+            <div class="col-md-6 col-12 py-2">
+				<a href="<?php echo get_permalink( $prev_post ); ?>">
+                <div class="card">
                     <div class="row">
-               <h1 class="continue pb-4">CONTINUEZ VOTRE LECTURE</h1>
+                        <div class="col-5">
 
-                        <div class="col-md-6 col-12 py-2">
-                                <div class="card">
-                                    <div class="row">
-
-                                        </div>
-                                    </div>
+                                <?php echo get_the_post_thumbnail( $prev_post, [ 250, 250 ], array('class' => 'other-page') ); ?>
+                        </div>
+                        <div class="col-7">
+                                <div class="card-body card-body-side card-body-side-prev">
+                                    <h3><strong><?php
+							echo get_field('formation_titre', $prev_post );?> <br>
+								<?php
+                    				$extras = new WP_Query(array('post_type' => 'extra'));
+                    				while ($extras->have_posts()) : $extras->the_post();
+                				?>
+                                            <small><?php the_field('precedant') ?></small>
+							<?php endwhile; wp_reset_postdata(); ?>
+									</strong></h3>
                                 </div>
                         </div>
                     </div>
+
                 </div>
-            </section> -->
+				</a>
+            </div> <?php endif; ?>
+
+            <?php if ( ! empty( $next_post ) ) : ?>
+            <div class="col-md-6 col-12 py-2">
+				<a href="<?php echo get_permalink( $next_post ); ?>">
+                <div class="card">
+                    <div class="row">
+                        <div class="col-7">
+                                <div class="card-body card-body-side">
+                                    <h3><strong><?php
+							echo get_field('formation_titre', $next_post );?> <br>
+								<?php
+                    				$extras = new WP_Query(array('post_type' => 'extra'));
+                    				while ($extras->have_posts()) : $extras->the_post();
+                				?>
+                                            <small>  <?php the_field('suivant'); ?></small>
+							<?php endwhile; wp_reset_postdata(); ?>
+										</strong></h3>
+                                </div>
+                        </div>
+                        <div class="col-5">
+                                <?php echo get_the_post_thumbnail( $next_post, [ 250, 250 ], array('class' => 'other-page') ); ?> 
+                        </div>
+                    </div>
+                </div>
+				</a>
+            </div>
+
+
         </div>
+    </div>
+
+</section>
+
+<?php endif; ?>
+</div>       
+			<?php endif; ?>
         </article>
-    </main>
 <?php 
-get_sidebar(); // Affiche le contenu de sidebar.php
 get_footer(); // Affiche footer.php 
 ?>

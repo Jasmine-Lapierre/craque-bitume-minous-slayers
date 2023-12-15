@@ -47,8 +47,8 @@ function add_style_and_js()  {
 		2. get_template_directory_uri() . '/style.css' = Chemin où ce trouve le fichier CSS en question
 	*/
 	wp_enqueue_style('bootstrap', "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");
-
-	wp_enqueue_style('default', get_template_directory_uri() . '/css/style.css?v='.time());
+	wp_enqueue_style('swiper', "https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css");
+	wp_enqueue_style('default', get_template_directory_uri() . '/style.css?v='.time());
 	wp_enqueue_style('font', "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 	/* Pour ajoutez une feuille de style supplémentaire, copier la ligne précédente et ajuster le chemin du fichier de façon relative vers votre nouveau fichier CSS */
@@ -86,105 +86,8 @@ function add_menu_list_item_class($classes, $item, $args) {
     return $classes;
 }
 add_filter('nav_menu_link_attributes', 'add_additional_class_on_a', 1, 3);
+
+
+
 /* Appel de la fonction ajoutant les styles et scripts */
 add_action('wp_enqueue_scripts', 'add_style_and_js'); 
-function wpb_posts_nav(){
-    $next_post = get_next_post();
-    $prev_post = get_previous_post();
-     
-    if ( $next_post || $prev_post ) : ?>
-     
-
-
-
-
-
-					<section>
-  <img src="../sources\medias\extras\leaf.png"
-                class="leaf3 col-xl-2 col-lg-3 pt-lg-0 col-md-4 mt-md-5 col-sm-4 col-6 pt-5 mt-5 pt-sm-4 mt-sm-5">        
-                <div class="container">
-                    <div class="row">
-                        <h1 class="continue pb-4">CONTINUEZ VOTRE LECTURE</h1>
-
-                <?php if ( ! empty( $prev_post ) ) : ?>
-
-
-
-
-              
-                        <div class="col-md-6 col-12 py-2">
-                                <div class="card">
-                                    <div class="row">
-                                        <div class="col-5">
-										<a href="<?php echo get_permalink( $prev_post ); ?>">
-
-											<?php echo get_the_post_thumbnail( $prev_post, [ 250, 250 ] ); ?>                      
-											</a>	
-                                        </div>
-                                        <div class="col-7">
-										<a href="<?php echo get_permalink( $prev_post ); ?>">
-                                            <div class="card-body card-body-side card-body-side-prev">
-											<h3><strong><?php
-							echo get_field('formation_titre', $prev_post );?> <br>
-                                                        <small>
-                                                            < Précédent</small></strong></h3>                                            </div>
-                                        </div>
-                                    </div></a>	
-
-                                </div>
-
-                        </div>							<?php endif; ?>
-
-						<?php if ( ! empty( $next_post ) ) : ?>
-                        <div class="col-md-6 col-12 py-2">
-                                <div class="card">
-                                    <div class="row">
-                                        <div class="col-7">
-										<a href="<?php echo get_permalink( $next_post ); ?>">
-
-                                            <div class="card-body card-body-side">
-											<h3><strong><?php
-							echo get_field('formation_titre', $next_post );?> <br>
-                                                        <small>Prochain ></small></strong></h3>
-                                            </div>
-                                        </div></a>
-                                        <div class="col-5">
-										<a href="<?php echo get_permalink( $next_post ); ?>">
-
-										<?php echo get_the_post_thumbnail( $next_post, [ 250, 250 ] ); ?>  </a>                    
-                                        </div>
-                                    </div>
-                                </div>
-                        </div> 						
-
-
-                    </div>
-                </div>
-
-            </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-                <?php endif; ?>
-            </div>
-        <!-- .wpb-posts-nav -->
-     
-    <?php endif;
-}

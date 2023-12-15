@@ -31,11 +31,28 @@
                     </div>
                     <div class="col-lg-7 col-md-12 pb-3">
                         <h1>
-                            Oups! Page non trouvée.
+                            								<?php
+                    				$extras = new WP_Query(array('post_type' => 'extra'));
+                    				while ($extras->have_posts()) : $extras->the_post();
+                				?>
+                                           <?php the_field('error_title') ?>
+							<?php endwhile; wp_reset_postdata(); ?>
+
                         </h1>
-                        <h2>Erreur 404</h2>
-                        <h3>La page que vous recherchez n'existe peut-être plus. Au besoin, n'hésitez pas à communiquer
-                            avec nous.
+                        <h2>                            								<?php
+                    				$extras = new WP_Query(array('post_type' => 'extra'));
+                    				while ($extras->have_posts()) : $extras->the_post();
+                				?>
+                                           <?php the_field('error_404') ?>
+							<?php endwhile; wp_reset_postdata(); ?>
+</h2>
+                        <h3>                            								<?php
+                    				$extras = new WP_Query(array('post_type' => 'extra'));
+                    				while ($extras->have_posts()) : $extras->the_post();
+                				?>
+                                           <?php the_field('error_text') ?>
+							<?php endwhile; wp_reset_postdata(); ?>
+
                         </h3>
 
                     </div>
